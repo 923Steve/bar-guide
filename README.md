@@ -16,8 +16,10 @@ cd bar-guide
 python -m http.server 5173
 ```
 
+Live phone URL: https://923steve.github.io/bar-guide/
+
 On this PC: http://localhost:5173  
-On a phone anywhere: the GitHub Pages URL (bookmark / Add to Home Screen).
+Add to Home Screen after opening the live URL.
 
 ## Weekly data
 
