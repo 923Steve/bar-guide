@@ -94,7 +94,7 @@ export function applyPhxDisplay(game, tag, ch) {
       phx: tag,
       phxLabel: "TICKET",
       netLabel: "Sunday Ticket",
-      channel: "9552–9567",
+      channel: game.ticketChannel || "9552–9567",
     };
   }
 

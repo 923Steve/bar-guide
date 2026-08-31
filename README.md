@@ -23,10 +23,27 @@ Add to Home Screen after opening the live URL.
 
 ## Weekly data
 
-Games live in `src/data/slate.js`. Channel numbers live in `src/data/channels.js`.  
+Games live in `src/data/slate.json`. Channel numbers live in `src/data/channels.js`.  
 Phoenix NFL tags are computed in `src/lib/phx.js` — do not hand-tag every row.
 
-Current slate: Week 1 2026 (Labor Day weekend).
+### Friday (the command)
+
+```bash
+cd C:\Users\steve\GitHubFIles\bar-guide
+python pull_week.py
+git add src/data/slate.json
+git commit -m "Week slate"
+git push
+```
+
+That pulls full FBS + the four Dakota games + the NFL card from ESPN. Glance the unmapped-team printout, then push. Phone updates in about a minute.
+
+Force a week: `python pull_week.py --cfb-week 2 --nfl-week 1 --year 2026`
+
+### Sunday (NFL only)
+
+In `slate.json`, on the FOX 10 / CBS 5 game set `"phx": "local"`.  
+If you get a Ticket number, set `"ticketChannel": "9554"` on that game. Then commit and push.
 
 ### If this chat is gone
 
@@ -34,30 +51,4 @@ The phone site is https://923steve.github.io/bar-guide/
 The code is https://github.com/923Steve/bar-guide  
 Folder on this PC: `C:\Users\steve\GitHubFIles\bar-guide`
 
-Open that folder in a **new** Cursor chat and say: `Friday week 2 refresh` or `Sunday stamp FOX 10 is Bears, Packers 9554`. You do not need this thread.
-
-Or do it yourself:
-
-1. Edit `src/data/slate.js`. One row per game:
-
-   `g("2026-09-13", "16:25", "cardinals", "chargers", "CBS", "at", null, "nfl")`
-
-   Date, ET time, away id, home id, network, `at` or `vs`, optional place, `cfb` or `nfl`.  
-   Team ids are in `src/data/teams.js`. Networks must match keys in `channels.js` (FOX, CBS, BTN, Ticket, Prime, …).
-
-2. FOX 10 / CBS 5 pick known: add `"local"` as the last argument.
-
-   `g("2026-09-13", "13:00", "bears", "panthers", "FOX", "at", null, "nfl", "local")`
-
-3. From that folder:
-
-   `git add src/data/slate.js`
-
-   `git commit -m "Week 2 slate"`
-
-   `git push`
-
-4. Wait ~1 minute. Refresh the phone. No app store update.
-
-Friday = replace the week’s rows (or ask a new chat to pull CFBD / ESPN).  
-Sunday = stamp `local` and any exact Ticket numbers you get. If you have no Ticket numbers, leave the range.
+Open that folder in a **new** Cursor chat and say `Friday week 2 refresh` or `Sunday stamp FOX 10 is Bears`. Or run the command above yourself.

@@ -1,7 +1,7 @@
 import { PINS, TEAMS } from "./data/teams.js";
-import { SLATE_NOTE } from "./data/slate.js";
 import { dayHeader, formatEt, formatPhx } from "./lib/time.js";
 import { decorate, decoratedSlate, gamesForTeam } from "./lib/lookup.js";
+import { SLATE_NOTE, setSlate } from "./lib/slate.js";
 
 const root = document.getElementById("root");
 
@@ -189,4 +189,15 @@ function esc(s) {
     .replace(/"/g, "&quot;");
 }
 
-render();
+async function boot() {
+  try {
+    const res = await fetch(new URL("./data/slate.json", import.meta.url));
+    if (!res.ok) throw new Error(String(res.status));
+    setSlate(await res.json());
+  } catch {
+    setSlate({ note: "No slate loaded", games: [] });
+  }
+  render();
+}
+
+boot();
