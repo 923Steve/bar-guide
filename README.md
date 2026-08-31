@@ -23,10 +23,41 @@ Add to Home Screen after opening the live URL.
 
 ## Weekly data
 
-Hand-load `src/data/slate.js` Friday from 506sports + Matt Sarz.  
-DTV numbers live in `src/data/channels.js`. Overflow (`610-1`) flags when two CFB games share a network and start time.
-
-NFL Phoenix tags are computed in `src/lib/phx.js` (Cardinals market).  
-When FOX 10 / CBS 5’s regional pick is known, stamp that game `phx: "local"`; the rest of that net+window flip to Ticket.
+Games live in `src/data/slate.js`. Channel numbers live in `src/data/channels.js`.  
+Phoenix NFL tags are computed in `src/lib/phx.js` — do not hand-tag every row.
 
 Current slate: Week 1 2026 (Labor Day weekend).
+
+### If this chat is gone
+
+The phone site is https://923steve.github.io/bar-guide/  
+The code is https://github.com/923Steve/bar-guide  
+Folder on this PC: `C:\Users\steve\GitHubFIles\bar-guide`
+
+Open that folder in a **new** Cursor chat and say: `Friday week 2 refresh` or `Sunday stamp FOX 10 is Bears, Packers 9554`. You do not need this thread.
+
+Or do it yourself:
+
+1. Edit `src/data/slate.js`. One row per game:
+
+   `g("2026-09-13", "16:25", "cardinals", "chargers", "CBS", "at", null, "nfl")`
+
+   Date, ET time, away id, home id, network, `at` or `vs`, optional place, `cfb` or `nfl`.  
+   Team ids are in `src/data/teams.js`. Networks must match keys in `channels.js` (FOX, CBS, BTN, Ticket, Prime, …).
+
+2. FOX 10 / CBS 5 pick known: add `"local"` as the last argument.
+
+   `g("2026-09-13", "13:00", "bears", "panthers", "FOX", "at", null, "nfl", "local")`
+
+3. From that folder:
+
+   `git add src/data/slate.js`
+
+   `git commit -m "Week 2 slate"`
+
+   `git push`
+
+4. Wait ~1 minute. Refresh the phone. No app store update.
+
+Friday = replace the week’s rows (or ask a new chat to pull CFBD / ESPN).  
+Sunday = stamp `local` and any exact Ticket numbers you get. If you have no Ticket numbers, leave the range.
