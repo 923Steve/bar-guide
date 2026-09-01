@@ -52,6 +52,8 @@ Check the phone with coffee. Log: `logs\friday_pull.log`.
 In `slate.json`, on the FOX 10 / CBS 5 game set `"phx": "local"`.  
 If you get a Ticket number, set `"ticketChannel": "9554"` on that game. Then commit and push.
 
+Copy-paste playbook: `CHEATSHEET.md`.
+
 ### If this chat is gone
 
 The phone site is https://923steve.github.io/bar-guide/  
