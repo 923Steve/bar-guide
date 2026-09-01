@@ -43,7 +43,7 @@ function render() {
 
       ${!state.pickerOpen && !state.installOpen ? `
         <div class="share">
-          <button class="add-phone" data-act="install">Add to phone</button>
+          <button class="add-phone" data-act="install">Add to Home Screen</button>
           <button class="copy" data-act="copy">${state.copied ? "Copied" : "Copy link"}</button>
         </div>
         <p class="share-url">${LIVE_SHOW}</p>
@@ -171,9 +171,9 @@ function pickerHtml() {
 
 function installHtml() {
   return `
-    <div class="sheet" role="dialog" aria-label="Add to phone">
+    <div class="sheet" role="dialog" aria-label="Add to Home Screen">
       <div class="sheet-top">
-        <strong>Add to phone</strong>
+        <strong>Add to Home Screen</strong>
         <button class="x" data-act="close-install">Close</button>
       </div>
       <p class="install-lead">Open this on <em>their</em> phone, then:</p>
