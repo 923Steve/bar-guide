@@ -49,5 +49,6 @@ const MONTHS = [
 export function dayHeader(isoDate) {
   const [y, mo, d] = isoDate.split("-").map(Number);
   const dt = new Date(Date.UTC(y, mo - 1, d, 17));
-  return `${DAYS[dt.getUTCDay()].toUpperCase()}, ${MONTHS[mo - 1].toUpperCase()} ${d}`;
+  const mon = MONTHS[mo - 1].slice(0, 3).toUpperCase();
+  return `${DAYS[dt.getUTCDay()].toUpperCase()}  ${mon} ${d}`;
 }

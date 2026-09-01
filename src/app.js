@@ -3,13 +3,18 @@ import { dayHeader, formatEt, formatPhx } from "./lib/time.js";
 import { decorate, decoratedSlate, gamesForTeam } from "./lib/lookup.js";
 import { SLATE_NOTE, setSlate } from "./lib/slate.js";
 
+const LIVE_URL = "https://923steve.github.io/bar-guide/";
+const LIVE_SHOW = "923steve.github.io/bar-guide";
+
 const root = document.getElementById("root");
 
 const state = {
   pickerOpen: false,
+  installOpen: false,
   league: "cfb",
   selected: null,
   pickerTab: "cfb",
+  copied: false,
 };
 
 function render() {
@@ -42,8 +47,16 @@ function render() {
 
       ${emptyHtml(hits)}
       ${groups.map(dayHtml).join("")}
-      ${!state.pickerOpen ? `<p class="hint">Find a team · punch the channel. Ticket numbers lock Sunday morning.</p>` : ""}
+      ${!state.pickerOpen && !state.installOpen ? `
+        <div class="share">
+          <button class="add-phone" data-act="install">Add to phone</button>
+          <button class="copy" data-act="copy">${state.copied ? "Copied" : "Copy link"}</button>
+        </div>
+        <p class="share-url">${LIVE_SHOW}</p>
+        <p class="hint">Find a team · punch the channel. Ticket numbers lock Sunday morning.</p>
+      ` : ""}
       ${state.pickerOpen ? pickerHtml() : ""}
+      ${state.installOpen ? installHtml() : ""}
     </div>
   `;
 
@@ -66,8 +79,26 @@ function render() {
     state.selected = null;
     render();
   });
+  root.querySelector("[data-act=install]")?.addEventListener("click", () => {
+    state.installOpen = true;
+    render();
+  });
+  root.querySelector("[data-act=copy]")?.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(LIVE_URL);
+    } catch {
+      window.prompt("Copy this link", LIVE_URL);
+    }
+    state.copied = true;
+    render();
+    setTimeout(() => {
+      state.copied = false;
+      if (!state.installOpen && !state.pickerOpen) render();
+    }, 1600);
+  });
 
   if (state.pickerOpen) bindPicker();
+  if (state.installOpen) bindInstall();
 }
 
 function emptyHtml(hits) {
@@ -136,6 +167,42 @@ function pickerHtml() {
       `).join("")}
     </div>
   `;
+}
+
+function installHtml() {
+  return `
+    <div class="sheet" role="dialog" aria-label="Add to phone">
+      <div class="sheet-top">
+        <strong>Add to phone</strong>
+        <button class="x" data-act="close-install">Close</button>
+      </div>
+      <p class="install-lead">Open this on <em>their</em> phone, then:</p>
+      <div class="install-block">
+        <div class="pin-label">iPhone</div>
+        <ol>
+          <li>Tap the Share button (square with the arrow)</li>
+          <li>Tap <strong>Add to Home Screen</strong></li>
+          <li>Tap <strong>Add</strong></li>
+        </ol>
+      </div>
+      <div class="install-block">
+        <div class="pin-label">Android</div>
+        <ol>
+          <li>Tap the three dots</li>
+          <li>Tap <strong>Install app</strong> or <strong>Add to Home Screen</strong></li>
+        </ol>
+      </div>
+      <p class="share-url">${LIVE_SHOW}</p>
+      <button class="copy" data-act="copy">${state.copied ? "Copied" : "Copy link"}</button>
+    </div>
+  `;
+}
+
+function bindInstall() {
+  root.querySelector("[data-act=close-install]")?.addEventListener("click", () => {
+    state.installOpen = false;
+    render();
+  });
 }
 
 function teamBtn(t) {

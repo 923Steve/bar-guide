@@ -61,11 +61,16 @@ body {
   background: transparent;
 }
 
-.day { margin-top: 22px; }
+.day { margin-top: 26px; }
 .day h2 {
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
 }
 .day ul { list-style: none; margin: 0; padding: 0; }
 .row {
@@ -137,8 +142,43 @@ body {
   margin-bottom: 6px;
 }
 .hint {
-  margin-top: 20px;
+  margin-top: 12px;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.4;
 }
+.share {
+  display: flex;
+  gap: 8px;
+  margin-top: 28px;
+}
+.add-phone, .copy {
+  flex: 1;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 12px 12px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+}
+.add-phone {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.share-url {
+  margin: 10px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  word-break: break-all;
+  color: var(--accent);
+}
+.install-lead { font-size: 15px; line-height: 1.4; }
+.install-block ol {
+  margin: 0 0 16px;
+  padding-left: 20px;
+  line-height: 1.5;
+}
+.install-block li { margin: 6px 0; }
