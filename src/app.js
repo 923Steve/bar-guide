@@ -49,7 +49,7 @@ function render() {
         <p class="share-url">${LIVE_SHOW}</p>
       ` : ""}
       <button class="find" data-act="open-picker">
-        ${state.selected ? `Team: ${esc(state.selected.name)}` : "Find a team"}
+        ${state.selected ? `TEAM: ${esc(state.selected.name)}` : "FIND A TEAM"}
       </button>
       ${state.selected ? `<button class="clear" data-act="clear">Show full slate</button>` : ""}
 
