@@ -142,8 +142,8 @@ body {
   margin-bottom: 6px;
 }
 .slogan {
-  margin-top: 18px;
-  font-size: 15px;
+  margin-top: 4px;
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.01em;
   color: var(--accent);
@@ -151,7 +151,8 @@ body {
 .share {
   display: flex;
   gap: 8px;
-  margin-top: 28px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 .add-phone, .copy {
   flex: 1;
@@ -170,7 +171,7 @@ body {
   border-color: var(--accent);
 }
 .share-url {
-  margin: 10px 0 0;
+  margin: 6px 0 14px;
   font-size: 13px;
   font-weight: 700;
   word-break: break-all;

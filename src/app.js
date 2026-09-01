@@ -32,6 +32,7 @@ function render() {
       <header class="top">
         <div>
           <div class="brand">Bar Guide</div>
+          <div class="slogan">Find a Team. Punch the Channel.</div>
           <div class="sub">${SLATE_NOTE} · Phoenix time</div>
         </div>
         <div class="league-toggle">
@@ -44,17 +45,16 @@ function render() {
         ${state.selected ? `Team: ${esc(state.selected.name)}` : "Find a team"}
       </button>
       ${state.selected ? `<button class="clear" data-act="clear">Show full slate</button>` : ""}
-
-      ${emptyHtml(hits)}
-      ${groups.map(dayHtml).join("")}
       ${!state.pickerOpen && !state.installOpen ? `
         <div class="share">
           <button class="add-phone" data-act="install">Add to phone</button>
           <button class="copy" data-act="copy">${state.copied ? "Copied" : "Copy link"}</button>
         </div>
         <p class="share-url">${LIVE_SHOW}</p>
-        <p class="slogan">Find a Team. Punch the Channel.</p>
       ` : ""}
+
+      ${emptyHtml(hits)}
+      ${groups.map(dayHtml).join("")}
       ${state.pickerOpen ? pickerHtml() : ""}
       ${state.installOpen ? installHtml() : ""}
     </div>
