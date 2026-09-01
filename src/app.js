@@ -32,7 +32,7 @@ function render() {
       <header class="top">
         <div>
           <div class="brand">Bar Guide</div>
-          <div class="slogan">Find a Game. Punch the Channel.</div>
+          <div class="slogan">Find a Team. Punch the Channel.</div>
           <div class="sub">${SLATE_NOTE} · Phoenix time</div>
         </div>
         <div class="league-toggle">
@@ -49,7 +49,7 @@ function render() {
         <p class="share-url">${LIVE_SHOW}</p>
       ` : ""}
       <button class="find" data-act="open-picker">
-        ${state.selected ? `Game: ${esc(state.selected.name)}` : "Find a game"}
+        ${state.selected ? `Team: ${esc(state.selected.name)}` : "Find a team"}
       </button>
       ${state.selected ? `<button class="clear" data-act="clear">Show full slate</button>` : ""}
 
@@ -141,9 +141,9 @@ function pickerHtml() {
   const letters = groupByLetter(alpha);
 
   return `
-    <div class="sheet" role="dialog" aria-label="Find a game">
+    <div class="sheet" role="dialog" aria-label="Find a team">
       <div class="sheet-top">
-        <strong>Find a game</strong>
+        <strong>Find a team</strong>
         <button class="x" data-act="close">Close</button>
       </div>
       <div class="league-toggle">
