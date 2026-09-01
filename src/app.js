@@ -53,7 +53,7 @@ function render() {
           <button class="copy" data-act="copy">${state.copied ? "Copied" : "Copy link"}</button>
         </div>
         <p class="share-url">${LIVE_SHOW}</p>
-        <p class="hint">Find a team · punch the channel. Ticket numbers lock Sunday morning.</p>
+        <p class="slogan">Find a Team. Punch the Channel.</p>
       ` : ""}
       ${state.pickerOpen ? pickerHtml() : ""}
       ${state.installOpen ? installHtml() : ""}

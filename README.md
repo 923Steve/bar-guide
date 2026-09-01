@@ -5,7 +5,7 @@ Phone-first “where’s the game” board for Arizona sports bars.
 - 506-style list (matchup / Phoenix time / network / DTV #)
 - Tap-a-team picker — no typing (Midwest, Dakotas, conferences)
 - “Not offered” is a valid answer
-- NFL rows tag Phoenix: LOCAL (FOX 10 / CBS 5), TICKET (9552–9567), NATIONAL, STREAM / DTV, or REGIONAL (10 or Ticket until Friday stamps the local pick)
+- NFL rows tag Phoenix: LOCAL (FOX 10 / CBS 5), NFL TICKET (9552–9567), NATIONAL, STREAM / DTV, or REGIONAL (10 or NFL Ticket until Friday stamps the local pick)
 
 No Node/npm. Python 3 is enough.
 

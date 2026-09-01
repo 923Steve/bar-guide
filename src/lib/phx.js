@@ -92,8 +92,8 @@ export function applyPhxDisplay(game, tag, ch) {
   if (tag === "ticket") {
     return {
       phx: tag,
-      phxLabel: "TICKET",
-      netLabel: "Sunday Ticket",
+      phxLabel: "NFL TICKET",
+      netLabel: "NFL Ticket",
       channel: game.ticketChannel || "9552–9567",
     };
   }
@@ -123,6 +123,6 @@ export function applyPhxDisplay(game, tag, ch) {
     phx: tag,
     phxLabel: "REGIONAL",
     netLabel: ch.label,
-    channel: `${localCh} or Ticket`,
+    channel: `${localCh} or NFL Ticket`,
   };
 }

@@ -141,11 +141,12 @@ body {
   color: var(--muted);
   margin-bottom: 6px;
 }
-.hint {
-  margin-top: 12px;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.4;
+.slogan {
+  margin-top: 18px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: var(--accent);
 }
 .share {
   display: flex;

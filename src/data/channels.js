@@ -20,7 +20,7 @@ export const CHANNELS = {
   TNT: { label: "TNT", channel: "245" },
   USA: { label: "USA", channel: "242" },
   NFLN: { label: "NFLN", channel: "212" },
-  Ticket: { label: "Sunday Ticket", channel: "9552–9567", note: "per-game # posts Sunday AM" },
+  Ticket: { label: "NFL Ticket", channel: "9552–9567", note: "per-game # posts Sunday AM" },
   RedZone: { label: "RedZone", channel: "9551" },
   "ESPN+": { label: "ESPN+", channel: null },
   "SECN+": { label: "SECN+", channel: null },
