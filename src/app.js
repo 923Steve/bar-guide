@@ -1,7 +1,7 @@
 import { PINS, TEAMS } from "./data/teams.js";
 import { dayHeader, formatEt, formatPhx } from "./lib/time.js";
 import { decorate, decoratedSlate, gamesForTeam } from "./lib/lookup.js";
-import { SLATE_NOTE, setSlate } from "./lib/slate.js";
+import { setSlate } from "./lib/slate.js";
 
 const LIVE_URL = "https://923steve.github.io/bar-guide/";
 const LIVE_SHOW = "923steve.github.io/bar-guide";
@@ -33,7 +33,6 @@ function render() {
         <div>
           <div class="brand">Bar Guide</div>
           <div class="slogan">Find a Team. Punch the Channel.</div>
-          <div class="sub">${SLATE_NOTE} · Phoenix time</div>
         </div>
         <div class="league-toggle">
           <button data-act="cfb" class="${state.league === "cfb" && !state.selected ? "on" : ""}">CFB</button>
