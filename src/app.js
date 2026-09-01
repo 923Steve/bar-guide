@@ -41,10 +41,6 @@ function render() {
         </div>
       </header>
 
-      <button class="find" data-act="open-picker">
-        ${state.selected ? `Team: ${esc(state.selected.name)}` : "Find a team"}
-      </button>
-      ${state.selected ? `<button class="clear" data-act="clear">Show full slate</button>` : ""}
       ${!state.pickerOpen && !state.installOpen ? `
         <div class="share">
           <button class="add-phone" data-act="install">Add to phone</button>
@@ -52,6 +48,10 @@ function render() {
         </div>
         <p class="share-url">${LIVE_SHOW}</p>
       ` : ""}
+      <button class="find" data-act="open-picker">
+        ${state.selected ? `Team: ${esc(state.selected.name)}` : "Find a team"}
+      </button>
+      ${state.selected ? `<button class="clear" data-act="clear">Show full slate</button>` : ""}
 
       ${emptyHtml(hits)}
       ${groups.map(dayHtml).join("")}
