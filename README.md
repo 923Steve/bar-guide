@@ -26,19 +26,26 @@ Add to Home Screen after opening the live URL.
 Games live in `src/data/slate.json`. Channel numbers live in `src/data/channels.js`.  
 Phoenix NFL tags are computed in `src/lib/phx.js` — do not hand-tag every row.
 
-### Friday (the command)
+### Friday
+
+A Windows task **Bar Guide Friday Pull** runs at 06:15 local every Friday (`friday_run.ps1` → ESPN pull → git push if the slate changed). Same logged-in / sleep-ok rules as MLB Morning Catchup.
+
+Install once:
+
+```bash
+powershell -ExecutionPolicy Bypass -File .\register_friday_pull.ps1
+```
+
+Manual run (if you want it now):
 
 ```bash
 cd C:\Users\steve\GitHubFIles\bar-guide
-python pull_week.py
-git add src/data/slate.json
-git commit -m "Week slate"
-git push
+powershell -ExecutionPolicy Bypass -File .\friday_run.ps1
 ```
 
-That pulls full FBS + the four Dakota games + the NFL card from ESPN. Glance the unmapped-team printout, then push. Phone updates in about a minute.
+Force a week: `python pull_week.py --cfb-week 2 --nfl-week 1 --year 2026` then commit and push.
 
-Force a week: `python pull_week.py --cfb-week 2 --nfl-week 1 --year 2026`
+Check the phone with coffee. Log: `logs\friday_pull.log`.
 
 ### Sunday (NFL only)
 
