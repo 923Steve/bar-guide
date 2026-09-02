@@ -121,7 +121,7 @@ function dayHtml([date, games]) {
               <span class="dot">·</span>
               <span class="net">${esc(g.netLabel)}</span>
               <span class="dot">·</span>
-              <span class="ch">${g.channel ? g.channel : "no channel"}</span>
+              <span class="ch">${g.channel ? g.channel : "Streaming Only"}</span>
               ${g.overflow ? `<span class="overflow"> check ${g.channel}-1</span>` : ""}
             </div>
             <div class="et">${formatEt(g.et)}</div>
