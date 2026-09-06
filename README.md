@@ -26,9 +26,9 @@ Add to Home Screen after opening the live URL.
 Games live in `src/data/slate.json`. Channel numbers live in `src/data/channels.js`.  
 Phoenix NFL tags are computed in `src/lib/phx.js` — do not hand-tag every row.
 
-### Friday
+### Tuesday + Friday
 
-A Windows task **Bar Guide Friday Pull** runs at 06:15 local every Friday (`friday_run.ps1` → ESPN pull → git push if the slate changed). Same logged-in / sleep-ok rules as MLB Morning Catchup.
+A Windows task **Bar Guide Slate Pull** runs at 06:15 local on Tuesday and Friday (`friday_run.ps1` → ESPN pull → git push if the slate changed). Tuesday loads Thursday CFB + TNF; Friday is the Saturday network look. Same logged-in / sleep-ok rules as MLB Morning Catchup.
 
 Install once:
 
@@ -45,7 +45,7 @@ powershell -ExecutionPolicy Bypass -File .\friday_run.ps1
 
 Force a week: `python pull_week.py --cfb-week 2 --nfl-week 1 --year 2026` then commit and push.
 
-Check the phone with coffee. Log: `logs\friday_pull.log`.
+Check the phone with coffee. Log: `logs\slate_pull.log`.
 
 ### Sunday (NFL only)
 
@@ -60,4 +60,4 @@ The phone site is https://923steve.github.io/bar-guide/
 The code is https://github.com/923Steve/bar-guide  
 Folder on this PC: `C:\Users\steve\GitHubFIles\bar-guide`
 
-Open that folder in a **new** Cursor chat and say `Friday week 2 refresh` or `Sunday stamp FOX 10 is Bears`. Or run the command above yourself.
+Open that folder in a **new** Cursor chat and say `Tuesday week 2 refresh` or `Sunday stamp FOX 10 is Bears`. Or run the command above yourself.

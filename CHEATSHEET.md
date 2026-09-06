@@ -5,15 +5,18 @@ Code folder: `C:\Users\steve\GitHubFIles\bar-guide`
 
 ---
 
-**FRIDAY (usually automatic)**
+**TUESDAY + FRIDAY (usually automatic)**
 
-Windows task **Bar Guide Friday Pull** runs at **6:15** local. It pulls ESPN and pushes if the slate changed. Open the phone with coffee and glance it.
+Windows task **Bar Guide Slate Pull** runs at **6:15** local on **Tuesday** and **Friday**. It pulls ESPN and pushes if the slate changed. Open the phone with coffee and glance it.
 
-Same travel rule as MLB: PC can sleep, don’t shut down or sign out. If you miss Friday on the road, it runs when the box wakes up.
+- Tuesday: next week — Thursday CFB + TNF
+- Friday: last look at Saturday networks
 
-Log: `C:\Users\steve\GitHubFIles\bar-guide\logs\friday_pull.log`
+Same travel rule as MLB: PC can sleep, don’t shut down or sign out. If you miss a morning on the road, it runs when the box wakes up.
 
-**Force a Friday now** (terminal in Cursor):
+Log: `C:\Users\steve\GitHubFIles\bar-guide\logs\slate_pull.log`
+
+**Force a pull now** (terminal in Cursor):
 
 ```
 cd C:\Users\steve\GitHubFIles\bar-guide
@@ -58,7 +61,7 @@ git commit -m "Fix slate"
 git push
 ```
 
-The Friday pull **keeps** `phx` and `ticketChannel` stamps on the same game id. It **will overwrite** network/time if ESPN still has the old value. If ESPN is wrong and you already fixed it, tell the chat so we lock that row — or wait until after Friday’s run to patch it again.
+The Tue/Fri pull **keeps** `phx` and `ticketChannel` stamps on the same game id. It **will overwrite** network/time if ESPN still has the old value. If ESPN is wrong and you already fixed it, tell the chat so we lock that row — or wait until after the next run to patch it again.
 
 ---
 
@@ -100,7 +103,7 @@ If you only have some numbers, stamp those. The rest stay `9552–9567`. The boa
 **IF THIS CHAT IS GONE**
 
 This file lives in the repo: `CHEATSHEET.md`  
-New Cursor chat on `bar-guide`: `Friday week 2 refresh` or `Sunday stamp FOX 10 is Bears`
+New Cursor chat on `bar-guide`: `Tuesday week 2 refresh` or `Sunday stamp FOX 10 is Bears`
 
 ---
 

@@ -1,4 +1,4 @@
-# Unattended Friday pull + push. Called by the scheduled task.
+# Unattended slate pull + push. Called by the Tue/Fri scheduled task.
 $ErrorActionPreference = "Stop"
 $RepoDir = $PSScriptRoot
 Set-Location $RepoDir
@@ -22,7 +22,7 @@ if (-not $changed) {
     exit 0
 }
 
-git commit -m "Friday slate pull"
+git commit -m "Slate pull"
 if ($LASTEXITCODE -ne 0) { throw "git commit failed" }
 git push
 if ($LASTEXITCODE -ne 0) { throw "git push failed" }

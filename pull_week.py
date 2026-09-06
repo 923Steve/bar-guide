@@ -1,4 +1,4 @@
-"""Friday slate pull. ESPN scoreboard → src/data/slate.json
+"""Slate pull (Tue + Fri). ESPN scoreboard → src/data/slate.json
 
   python pull_week.py
   python pull_week.py --cfb-week 1 --nfl-week 1 --year 2026

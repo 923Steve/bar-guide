@@ -1,6 +1,7 @@
-# Registers a Windows Scheduled Task that pulls the bar-guide slate every
-# Friday morning and pushes it to GitHub Pages.
+# Registers a Windows Scheduled Task that pulls the bar-guide slate
+# Tuesday and Friday mornings and pushes it to GitHub Pages.
 #
+# Tuesday = next week (Thu CFB + TNF). Friday = Saturday networks.
 # Same rules as MLB Morning Catchup / WNBA:
 # - Stay LOGGED IN (lock/sleep is fine via WakeToRun; do not sign out / shut down).
 # - Git uses the credentials already on this PC.
@@ -8,14 +9,15 @@
 # Install ONCE (no admin needed):
 #     powershell -ExecutionPolicy Bypass -File .\register_friday_pull.ps1
 # Remove with:
-#     Unregister-ScheduledTask -TaskName "Bar Guide Friday Pull" -Confirm:$false
+#     Unregister-ScheduledTask -TaskName "Bar Guide Slate Pull" -Confirm:$false
 
 $ErrorActionPreference = "Stop"
 
-$TaskName = "Bar Guide Friday Pull"
+$TaskName = "Bar Guide Slate Pull"
+$OldNames = @("Bar Guide Friday Pull", $TaskName)
 $RepoDir  = $PSScriptRoot
 $LogDir   = Join-Path $RepoDir "logs"
-$LogFile  = Join-Path $LogDir "friday_pull.log"
+$LogFile  = Join-Path $LogDir "slate_pull.log"
 $Runner   = Join-Path $RepoDir "friday_run.ps1"
 
 New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
@@ -32,9 +34,9 @@ $encoded = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($inner))
 $action = New-ScheduledTaskAction -Execute "powershell.exe" `
     -Argument "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -EncodedCommand $encoded"
 
-# After MLB 06:00 so they don't stomp each other. Missed Friday (travel/sleep)
+# After MLB 06:00 so they don't stomp each other. Missed morning (travel/sleep)
 # re-fires when the PC is next up.
-$trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Friday -At "06:15"
+$trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Tuesday, Friday -At "06:15"
 
 $settings = New-ScheduledTaskSettingsSet `
     -WakeToRun `
@@ -46,16 +48,18 @@ $settings = New-ScheduledTaskSettingsSet `
 
 $principal = New-ScheduledTaskPrincipal -UserId "$env:USERDOMAIN\$env:USERNAME" -LogonType Interactive -RunLevel Limited
 
-if (Get-ScheduledTask -TaskName $TaskName -ErrorAction SilentlyContinue) {
-    Unregister-ScheduledTask -TaskName $TaskName -Confirm:$false
-    Write-Host "Removed existing task to re-register."
+foreach ($name in $OldNames) {
+    if (Get-ScheduledTask -TaskName $name -ErrorAction SilentlyContinue) {
+        Unregister-ScheduledTask -TaskName $name -Confirm:$false
+        Write-Host "Removed existing task '$name' to re-register."
+    }
 }
 
 Register-ScheduledTask -TaskName $TaskName -Action $action -Trigger $trigger `
     -Settings $settings -Principal $principal `
-    -Description "Friday ESPN slate pull + git push for Bar Guide (GitHub Pages). See friday_run.ps1." | Out-Null
+    -Description "Tue+Fri ESPN slate pull + git push for Bar Guide (GitHub Pages). See friday_run.ps1." | Out-Null
 
 Write-Host ""
-Write-Host "Installed '$TaskName' Fridays at 06:15 local."
+Write-Host "Installed '$TaskName' Tue and Fri at 06:15 local."
 Write-Host "Test it now with:  Start-ScheduledTask -TaskName '$TaskName'"
 Write-Host "Then check:        Get-Content '$LogFile' -Tail 20"
