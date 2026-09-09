@@ -12,7 +12,7 @@ import json
 import re
 import sys
 import urllib.request
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -337,6 +337,20 @@ def scoreboard(kind: str, year: int, week: int, extra: str = "") -> dict:
     return get(url)
 
 
+def board_date(today: date) -> date:
+    """Which day's games this pull is for.
+
+    Mon–Thu → this Thursday (CFB + TNF). Fri–Sat → this Saturday.
+    Sunday → today. Avoids ESPN's week-1 end date still covering Tuesday.
+    """
+    wd = today.weekday()
+    if wd <= 3:
+        return today + timedelta(days=3 - wd)
+    if wd <= 5:
+        return today + timedelta(days=5 - wd)
+    return today
+
+
 def calendar_week(kind: str, year: int, today: date) -> int:
     data = scoreboard(kind, year, 1)
     leagues = data.get("leagues") or []
@@ -375,7 +389,8 @@ def calendar_week(kind: str, year: int, today: date) -> int:
             return None
         return datetime.fromisoformat(raw.replace("Z", "+00:00")).date()
 
-    current = None
+    target = board_date(today)
+    hits: list[tuple[date, int]] = []
     upcoming = None
     for entry in entries:
         start = parse_start(entry)
@@ -386,12 +401,14 @@ def calendar_week(kind: str, year: int, today: date) -> int:
         num = int(entry.get("value") or 0)
         if num <= 0 or num >= 900:
             continue
-        if start <= today <= end:
-            current = num
-            break
-        if start > today and upcoming is None:
+        if start <= target <= end:
+            hits.append((start, num))
+        if start > target and upcoming is None:
             upcoming = num
-    return current or upcoming or 1
+    if hits:
+        hits.sort()
+        return hits[-1][1]
+    return upcoming or 1
 
 
 def merge_stamps(games: list[dict], old: list[dict]) -> None:

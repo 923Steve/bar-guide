@@ -1,7 +1,7 @@
 # Registers a Windows Scheduled Task that pulls the bar-guide slate
 # Tuesday and Friday mornings and pushes it to GitHub Pages.
 #
-# Tuesday = next week (Thu CFB + TNF). Friday = Saturday networks.
+# Tuesday = this week's Thursday (CFB + TNF). Friday = Saturday networks.
 # Same rules as MLB Morning Catchup / WNBA:
 # - Stay LOGGED IN (lock/sleep is fine via WakeToRun; do not sign out / shut down).
 # - Git uses the credentials already on this PC.
@@ -22,11 +22,24 @@ $Runner   = Join-Path $RepoDir "friday_run.ps1"
 
 New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
 
+$python = $null
+$cmd = (Get-Command python -ErrorAction SilentlyContinue).Source
+if ($cmd -and (Test-Path -LiteralPath $cmd)) { $python = $cmd }
+if (-not $python) {
+    foreach ($ver in @("Python312", "Python313", "Python311", "Python310")) {
+        $guess = Join-Path $env:LOCALAPPDATA "Programs\Python\$ver\python.exe"
+        if (Test-Path -LiteralPath $guess) { $python = $guess; break }
+    }
+}
+if (-not $python) { throw "python not found. Install Python or add it to PATH, then re-run this script." }
+
 Write-Host "Repo : $RepoDir"
 Write-Host "Log  : $LogFile"
+Write-Host "Py   : $python"
 
 $inner = "Set-Location '$RepoDir'; " +
          "`$env:PYTHONUTF8='1'; `$env:PYTHONIOENCODING='utf-8'; " +
+         "`$env:BAR_GUIDE_PYTHON='$python'; " +
          "Add-Content -Path '$LogFile' -Value ('==== ' + (Get-Date -Format 'yyyy-MM-dd HH:mm:ss') + ' ===='); " +
          "& '$Runner' *>> '$LogFile'"
 $encoded = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($inner))

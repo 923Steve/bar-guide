@@ -9,7 +9,7 @@ Code folder: `C:\Users\steve\GitHubFIles\bar-guide`
 
 Windows task **Bar Guide Slate Pull** runs at **6:15** local on **Tuesday** and **Friday**. It pulls ESPN and pushes if the slate changed. Open the phone with coffee and glance it.
 
-- Tuesday: next week — Thursday CFB + TNF
+- Tuesday: this week’s Thursday — CFB + TNF
 - Friday: last look at Saturday networks
 
 Same travel rule as MLB: PC can sleep, don’t shut down or sign out. If you miss a morning on the road, it runs when the box wakes up.
