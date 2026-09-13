@@ -257,7 +257,9 @@ function esc(s) {
 
 async function boot() {
   try {
-    const res = await fetch(new URL("./data/slate.json", import.meta.url));
+    const res = await fetch(new URL("./data/slate.json", import.meta.url), {
+      cache: "no-store",
+    });
     if (!res.ok) throw new Error(String(res.status));
     setSlate(await res.json());
   } catch {
