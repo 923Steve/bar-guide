@@ -1199,7 +1199,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9561"
     },
     {
       "id": "2026-09-13-bills-texans",
@@ -1212,7 +1212,7 @@
       "place": null,
       "league": "nfl",
       "phx": "local",
-      "ticketChannel": null
+      "ticketChannel": "9559"
     },
     {
       "id": "2026-09-13-browns-jaguars",
@@ -1225,7 +1225,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9557"
     },
     {
       "id": "2026-09-13-buccaneers-bengals",
@@ -1238,7 +1238,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9555"
     },
     {
       "id": "2026-09-13-falcons-steelers",
@@ -1251,7 +1251,7 @@
       "place": null,
       "league": "nfl",
       "phx": "local",
-      "ticketChannel": null
+      "ticketChannel": "9560"
     },
     {
       "id": "2026-09-13-jets-titans",
@@ -1264,7 +1264,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9558"
     },
     {
       "id": "2026-09-13-ravens-colts",
@@ -1277,7 +1277,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9556"
     },
     {
       "id": "2026-09-13-saints-lions",
@@ -1290,7 +1290,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9554"
     },
     {
       "id": "2026-09-13-cardinals-chargers",
@@ -1302,8 +1302,8 @@
       "site": "at",
       "place": null,
       "league": "nfl",
-      "phx": null,
-      "ticketChannel": null
+      "phx": "local",
+      "ticketChannel": "9556"
     },
     {
       "id": "2026-09-13-commanders-eagles",
@@ -1316,7 +1316,7 @@
       "place": null,
       "league": "nfl",
       "phx": "local",
-      "ticketChannel": null
+      "ticketChannel": "9557"
     },
     {
       "id": "2026-09-13-dolphins-raiders",
@@ -1329,7 +1329,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9555"
     },
     {
       "id": "2026-09-13-packers-vikings",
@@ -1342,7 +1342,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9554"
     },
     {
       "id": "2026-09-13-cowboys-giants",
