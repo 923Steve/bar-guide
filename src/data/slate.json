@@ -3,7 +3,7 @@
   "year": 2026,
   "cfbWeek": 3,
   "nflWeek": 2,
-  "pulled": "2026-09-15T01:55Z",
+  "pulled": "2026-09-15T13:50Z",
   "games": [
     {
       "id": "2026-09-17-syracuse-pitt",
@@ -778,7 +778,7 @@
       "et": "19:30",
       "away": "colorado",
       "home": "northwestern",
-      "network": "TBD",
+      "network": "FOX",
       "site": "at",
       "place": null,
       "league": "cfb",
@@ -830,7 +830,7 @@
       "et": "19:30",
       "away": "virginia-tech",
       "home": "maryland",
-      "network": "TBD",
+      "network": "FS1",
       "site": "at",
       "place": null,
       "league": "cfb",
