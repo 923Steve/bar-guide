@@ -47,10 +47,16 @@ Force a week: `python pull_week.py --cfb-week 2 --nfl-week 1 --year 2026` then c
 
 Check the phone with coffee. Log: `logs\slate_pull.log`.
 
-### Sunday (NFL only)
+### Sunday 6:15 (Phoenix locals)
 
-In `slate.json`, on the FOX 10 / CBS 5 game set `"phx": "local"`.  
-If you get a Ticket number, set `"ticketChannel": "9554"` on that game. Then commit and push.
+Windows task **Bar Guide Sunday Locals** reads FOX 10 / CBS 5 listings and stamps `"phx": "local"`. Ticket numbers are still you.
+
+```bash
+powershell -ExecutionPolicy Bypass -File .\register_sunday_locals.ps1
+powershell -ExecutionPolicy Bypass -File .\sunday_run.ps1
+```
+
+Log: `logs\sunday_locals.log`.
 
 Copy-paste playbook: `CHEATSHEET.md`.
 

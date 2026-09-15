@@ -65,13 +65,20 @@ The Tue/Fri pull **keeps** `phx` and `ticketChannel` stamps on the same game id.
 
 ---
 
-**SUNDAY — NFL CHANNELS**
+**SUNDAY 6:15 (usually automatic)**
 
-You do **not** need DirecTV for FOX 10 / CBS 5. Check a Phoenix listings page.
+Windows task **Bar Guide Sunday Locals** stamps FOX 10 / CBS 5 from Phoenix listings (not DirecTV). Glance the NFL tab with coffee.
 
-**Local pick known** (example: FOX 10 is Bears):  
-Tell a chat `Sunday stamp FOX 10 is Bears`  
-or in `slate.json` on that game set `"phx": "local"`, then commit and push. The other FOX games in that window flip to NFL Ticket.
+Log: `C:\Users\steve\GitHubFIles\bar-guide\logs\sunday_locals.log`
+
+Force it now:
+
+```
+cd C:\Users\steve\GitHubFIles\bar-guide
+powershell -ExecutionPolicy Bypass -File .\sunday_run.ps1
+```
+
+If a local is wrong, tell a chat `Sunday stamp FOX 10 is Bears` and we fix that row.
 
 **You got all the NFL Ticket numbers** (9552–9567 board):
 
