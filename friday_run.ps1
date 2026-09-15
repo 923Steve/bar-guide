@@ -32,7 +32,7 @@ try {
     git add src/data/slate.json
     $changed = @(git diff --cached --name-only)
     if (-not $changed) {
-        Write-Host "Slate unchanged — no push."
+        Write-Host "Slate unchanged - no push."
         exit 0
     }
 
@@ -42,6 +42,7 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "git push failed" }
     Write-Host "Pushed. Phone updates in about a minute."
 } catch {
-    Write-Host "SLATE PULL FAILED: $($_.Exception.Message)"
+    $msg = $_.Exception.Message
+    Write-Host "SLATE PULL FAILED: $msg"
     throw
 }
