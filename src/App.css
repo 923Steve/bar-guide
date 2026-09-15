@@ -28,7 +28,7 @@ body {
   gap: 12px;
   margin-bottom: 16px;
 }
-.brand { font-weight: 700; font-size: 22px; letter-spacing: -0.02em; }
+.brand { font-weight: 700; font-size: 20px; letter-spacing: -0.02em; }
 .sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
 
 .league-toggle { display: flex; gap: 6px; flex-wrap: wrap; }

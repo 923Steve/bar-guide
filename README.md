@@ -1,4 +1,4 @@
-# Bar Guide
+# Where's My Game
 
 Phone-first “where’s the game” board for Arizona sports bars.
 

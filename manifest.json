@@ -1,7 +1,7 @@
 {
-  "name": "Bar Guide",
-  "short_name": "Bar Guide",
-  "description": "Where's the game — Phoenix DirecTV",
+  "name": "Where's My Game",
+  "short_name": "My Game",
+  "description": "Find a team. Punch the channel. — Phoenix DirecTV",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

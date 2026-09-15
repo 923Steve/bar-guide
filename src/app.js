@@ -31,7 +31,7 @@ function render() {
     <div class="page">
       <header class="top">
         <div>
-          <div class="brand">Bar Guide</div>
+          <div class="brand">Where's My Game</div>
           <div class="slogan">Find a Team. Punch the Channel.</div>
         </div>
         <div class="league-toggle">
