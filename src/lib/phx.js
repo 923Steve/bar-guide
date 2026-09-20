@@ -64,6 +64,9 @@ export function phxTag(game, all = []) {
   if (LOCAL_NETS.has(net)) {
     if (involves(game, LOCAL_TEAM) || game.phx === "local") return "local";
     if (localOnNetWindow(game, all)) return "ticket";
+    // Human-stamped 95xx means the board put it on Ticket, even if
+    // this window has no Phoenix OTA (CBS 5 late today).
+    if (game.ticketChannel) return "ticket";
     return "regional";
   }
 
