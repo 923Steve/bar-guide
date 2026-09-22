@@ -26,7 +26,10 @@ try {
     $python = Resolve-Python
     Write-Host "Python: $python"
     Write-Host "Pulling slate..."
-    & $python pull_week.py
+    # Python tracebacks go to stderr. ErrorActionPreference=Stop plus the
+    # task's *>> redirect turns that into a throw of only the first line.
+    $pyOut = cmd /c "`"$python`" pull_week.py 2>&1"
+    Write-Host ($pyOut -join "`n")
     if ($LASTEXITCODE -ne 0) { throw "pull_week.py failed ($LASTEXITCODE)" }
 
     git add src/data/slate.json

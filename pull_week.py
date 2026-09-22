@@ -20,7 +20,12 @@ ROOT = Path(__file__).resolve().parent
 SLATE_PATH = ROOT / "src" / "data" / "slate.json"
 TEAMS_PATH = ROOT / "src" / "data" / "teams.js"
 ET = ZoneInfo("America/New_York")
-UA = {"User-Agent": "Mozilla/5.0"}
+# ESPN 403s a generic Mozilla/5.0 (and full Chrome UA) as of mid-Sep 2026.
+# A named client + JSON accept still gets the public scoreboard.
+UA = {
+    "User-Agent": "bar-guide/1.0 (+https://923steve.github.io/bar-guide/)",
+    "Accept": "application/json",
+}
 
 DAKOTA_ESPN_IDS = {"155", "233", "2449", "2571"}
 
