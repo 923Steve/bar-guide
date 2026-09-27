@@ -991,7 +991,7 @@
       "place": null,
       "league": "nfl",
       "phx": "local",
-      "ticketChannel": null
+      "ticketChannel": "9556"
     },
     {
       "id": "2026-09-27-chargers-bills",
@@ -1004,7 +1004,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9559"
     },
     {
       "id": "2026-09-27-chiefs-dolphins",
@@ -1017,7 +1017,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9557"
     },
     {
       "id": "2026-09-27-jets-lions",
@@ -1030,7 +1030,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9560"
     },
     {
       "id": "2026-09-27-panthers-browns",
@@ -1043,7 +1043,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9561"
     },
     {
       "id": "2026-09-27-patriots-jaguars",
@@ -1056,7 +1056,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9555"
     },
     {
       "id": "2026-09-27-seahawks-commanders",
@@ -1069,7 +1069,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9554"
     },
     {
       "id": "2026-09-27-texans-colts",
@@ -1082,7 +1082,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9558"
     },
     {
       "id": "2026-09-27-titans-giants",
@@ -1095,7 +1095,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9554"
     },
     {
       "id": "2026-09-27-cardinals-49ers",
@@ -1108,7 +1108,7 @@
       "place": null,
       "league": "nfl",
       "phx": "local",
-      "ticketChannel": null
+      "ticketChannel": "9556"
     },
     {
       "id": "2026-09-27-vikings-buccaneers",
@@ -1121,7 +1121,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9555"
     },
     {
       "id": "2026-09-27-raiders-saints",
@@ -1134,7 +1134,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9558"
     },
     {
       "id": "2026-09-27-ravens-cowboys",
@@ -1147,7 +1147,7 @@
       "place": "Rio De Janeiro",
       "league": "nfl",
       "phx": "local",
-      "ticketChannel": null
+      "ticketChannel": "9557"
     },
     {
       "id": "2026-09-27-rams-broncos",
