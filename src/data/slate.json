@@ -3,7 +3,7 @@
   "year": 2026,
   "cfbWeek": 5,
   "nflWeek": 4,
-  "pulled": "2026-09-29T13:15Z",
+  "pulled": "2026-10-02T13:15Z",
   "games": [
     {
       "id": "2026-10-01-western-kentucky-new-mexico-state",
@@ -77,6 +77,19 @@
       "away": "penn-state",
       "home": "northwestern",
       "network": "FOX",
+      "site": "at",
+      "place": null,
+      "league": "cfb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-03-memphis-charlotte",
+      "date": "2026-10-03",
+      "et": "11:00",
+      "away": "memphis",
+      "home": "charlotte",
+      "network": "ESPN+",
       "site": "at",
       "place": null,
       "league": "cfb",
@@ -376,19 +389,6 @@
       "away": "louisville",
       "home": "nc-state",
       "network": "ACCN",
-      "site": "at",
-      "place": null,
-      "league": "cfb",
-      "phx": null,
-      "ticketChannel": null
-    },
-    {
-      "id": "2026-10-03-memphis-charlotte",
-      "date": "2026-10-03",
-      "et": "15:30",
-      "away": "memphis",
-      "home": "charlotte",
-      "network": "ESPN+",
       "site": "at",
       "place": null,
       "league": "cfb",
