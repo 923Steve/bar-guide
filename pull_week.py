@@ -66,6 +66,7 @@ NET_MAP = {
     "AMAZON PRIME": "Prime",
     "AMAZON": "Prime",
     "NFL NETWORK": "NFLN",
+    "NFL NET": "NFLN",
     "NFLN": "NFLN",
     "MW+": "MW+",
     "HBO MAX": "HBO Max",

@@ -830,7 +830,7 @@
       "et": "09:30",
       "away": "colts",
       "home": "commanders",
-      "network": "NFL Net",
+      "network": "NFLN",
       "site": "vs",
       "place": "London",
       "league": "nfl",
@@ -848,7 +848,7 @@
       "place": null,
       "league": "nfl",
       "phx": "local",
-      "ticketChannel": null
+      "ticketChannel": "9559"
     },
     {
       "id": "2026-10-04-cowboys-texans",
@@ -861,7 +861,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9555"
     },
     {
       "id": "2026-10-04-jaguars-bengals",
@@ -874,7 +874,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9561"
     },
     {
       "id": "2026-10-04-jets-bears",
@@ -887,7 +887,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9556"
     },
     {
       "id": "2026-10-04-packers-buccaneers",
@@ -900,7 +900,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9557"
     },
     {
       "id": "2026-10-04-patriots-bills",
@@ -913,7 +913,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9558"
     },
     {
       "id": "2026-10-04-rams-eagles",
@@ -926,7 +926,7 @@
       "place": null,
       "league": "nfl",
       "phx": "local",
-      "ticketChannel": null
+      "ticketChannel": "9554"
     },
     {
       "id": "2026-10-04-titans-ravens",
@@ -939,7 +939,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9560"
     },
     {
       "id": "2026-10-04-dolphins-vikings",
@@ -952,7 +952,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9554"
     },
     {
       "id": "2026-10-04-broncos-49ers",
@@ -965,7 +965,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9556"
     },
     {
       "id": "2026-10-04-chargers-seahawks",
@@ -978,7 +978,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9557"
     },
     {
       "id": "2026-10-04-chiefs-raiders",
@@ -991,7 +991,7 @@
       "place": null,
       "league": "nfl",
       "phx": "local",
-      "ticketChannel": null
+      "ticketChannel": "9555"
     },
     {
       "id": "2026-10-04-lions-panthers",
