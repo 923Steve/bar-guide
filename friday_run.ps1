@@ -32,6 +32,13 @@ try {
     Write-Host ($pyOut -join "`n")
     if ($LASTEXITCODE -ne 0) { throw "pull_week.py failed ($LASTEXITCODE)" }
 
+    Write-Host "Pulling NASCAR + F1..."
+    $raceOut = cmd /c "`"$python`" pull_racing.py 2>&1"
+    Write-Host ($raceOut -join "`n")
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "RACING PULL FAILED ($LASTEXITCODE) - football slate still used."
+    }
+
     git add src/data/slate.json
     $changed = @(git diff --cached --name-only)
     if (-not $changed) {

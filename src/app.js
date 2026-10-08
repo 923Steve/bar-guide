@@ -5,10 +5,21 @@ import { setSlate } from "./lib/slate.js";
 
 const LIVE_URL = "https://923steve.github.io/bar-guide/";
 const LIVE_SHOW = "923steve.github.io/bar-guide";
+const LAST_SPORT_KEY = "wmg-sport";
+
+const SPORTS = [
+  { id: "cfb", label: "College Football", hint: "Find a team. Punch the channel." },
+  { id: "nfl", label: "NFL", hint: "Locals, Ticket, national." },
+  { id: "nascar", label: "NASCAR", hint: "Truck, O'Reilly, Cup." },
+  { id: "f1", label: "Formula 1", hint: "Qualifying, sprint, race." },
+];
+
+const SPORT_BY_ID = Object.fromEntries(SPORTS.map((s) => [s.id, s]));
 
 const root = document.getElementById("root");
 
 const state = {
+  screen: "home",
   pickerOpen: false,
   installOpen: false,
   league: "cfb",
@@ -17,7 +28,68 @@ const state = {
   copied: false,
 };
 
+function isTeamSport(league) {
+  return league === "cfb" || league === "nfl";
+}
+
+function openSport(id) {
+  state.screen = "slate";
+  state.league = id;
+  state.selected = null;
+  state.pickerOpen = false;
+  try {
+    localStorage.setItem(LAST_SPORT_KEY, id);
+  } catch {
+    /* private mode */
+  }
+  render();
+}
+
+function goHome() {
+  state.screen = "home";
+  state.selected = null;
+  state.pickerOpen = false;
+  state.installOpen = false;
+  render();
+}
+
 function render() {
+  if (state.screen === "home") {
+    renderHome();
+    return;
+  }
+  renderSlate();
+}
+
+function renderHome() {
+  root.innerHTML = `
+    <div class="page">
+      <header class="top home-top">
+        <div>
+          <div class="brand">Where's My Game</div>
+          <div class="slogan">Find a Team. Punch the Channel.</div>
+        </div>
+      </header>
+      <div class="sport-list">
+        ${SPORTS.map((s) => `
+          <button class="sport-btn" data-sport="${s.id}">
+            <span class="sport-label">${esc(s.label)}</span>
+            <span class="sport-hint">${esc(s.hint)}</span>
+          </button>
+        `).join("")}
+      </div>
+      ${shareHtml()}
+      ${state.installOpen ? installHtml() : ""}
+    </div>
+  `;
+  root.querySelectorAll("[data-sport]").forEach((b) => {
+    b.addEventListener("click", () => openSport(b.dataset.sport));
+  });
+  bindShare();
+  if (state.installOpen) bindInstall();
+}
+
+function renderSlate() {
   const slate = decoratedSlate();
   const hits = state.selected
     ? gamesForTeam(state.selected.id).map((g) => decorate(g))
@@ -26,49 +98,33 @@ function render() {
     ? hits
     : slate.filter((g) => g.league === state.league);
   const groups = groupByDate(list);
+  const sport = SPORT_BY_ID[state.league] || { label: state.league };
 
   root.innerHTML = `
     <div class="page">
       <header class="top">
         <div>
-          <div class="brand">Where's My Game</div>
-          <div class="slogan">Find a Team. Punch the Channel.</div>
-        </div>
-        <div class="league-toggle">
-          <button data-act="cfb" class="${state.league === "cfb" && !state.selected ? "on" : ""}">CFB</button>
-          <button data-act="nfl" class="${state.league === "nfl" && !state.selected ? "on" : ""}">NFL</button>
+          <button class="back" data-act="home">Sports</button>
+          <div class="brand">${esc(sport.label)}</div>
         </div>
       </header>
 
-      ${!state.pickerOpen && !state.installOpen ? `
-        <div class="share">
-          <button class="add-phone" data-act="install">Add to Home Screen</button>
-          <button class="copy" data-act="copy">${state.copied ? "Copied" : "Copy link"}</button>
-        </div>
-        <p class="share-url">${LIVE_SHOW}</p>
+      ${!state.pickerOpen && !state.installOpen ? shareHtml() : ""}
+      ${isTeamSport(state.league) ? `
+        <button class="find" data-act="open-picker">
+          ${state.selected ? `TEAM: ${esc(state.selected.name)}` : "FIND A TEAM"}
+        </button>
+        ${state.selected ? `<button class="clear" data-act="clear">Show full slate</button>` : ""}
       ` : ""}
-      <button class="find" data-act="open-picker">
-        ${state.selected ? `TEAM: ${esc(state.selected.name)}` : "FIND A TEAM"}
-      </button>
-      ${state.selected ? `<button class="clear" data-act="clear">Show full slate</button>` : ""}
 
-      ${emptyHtml(hits)}
+      ${emptyHtml(hits, list)}
       ${groups.map(dayHtml).join("")}
       ${state.pickerOpen ? pickerHtml() : ""}
       ${state.installOpen ? installHtml() : ""}
     </div>
   `;
 
-  root.querySelector("[data-act=cfb]")?.addEventListener("click", () => {
-    state.league = "cfb";
-    state.selected = null;
-    render();
-  });
-  root.querySelector("[data-act=nfl]")?.addEventListener("click", () => {
-    state.league = "nfl";
-    state.selected = null;
-    render();
-  });
+  root.querySelector("[data-act=home]")?.addEventListener("click", goHome);
   root.querySelector("[data-act=open-picker]")?.addEventListener("click", () => {
     state.pickerOpen = true;
     state.pickerTab = state.selected?.league || state.league;
@@ -78,34 +134,37 @@ function render() {
     state.selected = null;
     render();
   });
-  root.querySelector("[data-act=install]")?.addEventListener("click", () => {
-    state.installOpen = true;
-    render();
-  });
-  root.querySelector("[data-act=copy]")?.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(LIVE_URL);
-    } catch {
-      window.prompt("Copy this link", LIVE_URL);
-    }
-    state.copied = true;
-    render();
-    setTimeout(() => {
-      state.copied = false;
-      if (!state.installOpen && !state.pickerOpen) render();
-    }, 1600);
-  });
-
+  bindShare();
   if (state.pickerOpen) bindPicker();
   if (state.installOpen) bindInstall();
 }
 
-function emptyHtml(hits) {
-  if (!state.selected || !hits || hits.length) return "";
-  if (state.selected.league === "nfl") {
-    return `<div class="empty"><strong>${esc(state.selected.name)}</strong> is not on this week’s loaded NFL slate.</div>`;
+function shareHtml() {
+  return `
+    <div class="share">
+      <button class="add-phone" data-act="install">Add to Home Screen</button>
+      <button class="copy" data-act="copy">${state.copied ? "Copied" : "Copy link"}</button>
+    </div>
+    <p class="share-url">${LIVE_SHOW}</p>
+  `;
+}
+
+function emptyHtml(hits, list) {
+  if (state.selected) {
+    if (hits && hits.length) return "";
+    if (state.selected.league === "nfl") {
+      return `<div class="empty"><strong>${esc(state.selected.name)}</strong> is not on this week’s loaded NFL slate.</div>`;
+    }
+    return `<div class="empty"><strong>${esc(state.selected.name)}</strong> is not offered on this week’s slate.</div>`;
   }
-  return `<div class="empty"><strong>${esc(state.selected.name)}</strong> is not offered on this week’s slate.</div>`;
+  if (list && list.length) return "";
+  if (state.league === "nascar") {
+    return `<div class="empty">No NASCAR on this slate yet.</div>`;
+  }
+  if (state.league === "f1") {
+    return `<div class="empty">No Formula 1 on this slate yet.</div>`;
+  }
+  return "";
 }
 
 function dayHtml([date, games]) {
@@ -197,6 +256,28 @@ function installHtml() {
   `;
 }
 
+function bindShare() {
+  root.querySelector("[data-act=install]")?.addEventListener("click", () => {
+    state.installOpen = true;
+    render();
+  });
+  root.querySelectorAll("[data-act=copy]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(LIVE_URL);
+      } catch {
+        window.prompt("Copy this link", LIVE_URL);
+      }
+      state.copied = true;
+      render();
+      setTimeout(() => {
+        state.copied = false;
+        if (!state.installOpen && !state.pickerOpen) render();
+      }, 1600);
+    });
+  });
+}
+
 function bindInstall() {
   root.querySelector("[data-act=close-install]")?.addEventListener("click", () => {
     state.installOpen = false;
@@ -264,6 +345,15 @@ async function boot() {
     setSlate(await res.json());
   } catch {
     setSlate({ note: "No slate loaded", games: [] });
+  }
+  try {
+    const last = localStorage.getItem(LAST_SPORT_KEY);
+    if (last && SPORT_BY_ID[last]) {
+      state.screen = "slate";
+      state.league = last;
+    }
+  } catch {
+    /* first visit */
   }
   render();
 }

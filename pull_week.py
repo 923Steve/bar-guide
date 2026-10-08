@@ -479,14 +479,17 @@ def main() -> int:
             seen.add(row["id"])
             games.append(row)
 
-    games.sort(key=lambda g: (g["date"], g["et"], g["away"]))
-    merge_stamps(games, load_old())
+    old = load_old()
+    merge_stamps(games, old)
+    keep = [g for g in old if g.get("league") not in {"cfb", "nfl"}]
+    games.extend(keep)
+    games.sort(key=lambda g: (g["date"], g["et"], g.get("away") or g.get("name") or ""))
 
     missing = []
     known = set(index.values())
     for g in games:
-        for tid in (g["away"], g["home"]):
-            if tid not in known and tid not in missing:
+        for tid in (g.get("away"), g.get("home")):
+            if tid and tid not in known and tid not in missing:
                 missing.append(tid)
 
     note = f"CFB week {cfb_week} / NFL week {nfl_week} / ESPN"

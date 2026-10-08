@@ -27,6 +27,7 @@ export const CHANNELS = {
   Peacock: { label: "Peacock", channel: null },
   "MW+": { label: "Mountain West+", channel: null },
   "HBO Max": { label: "HBO Max", channel: null },
+  "Apple TV": { label: "Apple TV", channel: null },
   Netflix: { label: "Netflix", channel: null },
   Prime: { label: "Prime", channel: "9550", note: "TNF feed on DTV" },
 };

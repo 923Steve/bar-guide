@@ -110,6 +110,36 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-10-09-f1-shootout-singapore-grand-prix",
+      "date": "2026-10-09",
+      "et": "08:30",
+      "away": null,
+      "home": null,
+      "network": "Apple TV",
+      "site": "at",
+      "place": "Singapore Grand Prix",
+      "league": "f1",
+      "series": "shootout",
+      "name": "Singapore Grand Prix",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-09-nascar-truck-charlotte",
+      "date": "2026-10-09",
+      "et": "17:00",
+      "away": null,
+      "home": null,
+      "network": "FOX",
+      "site": "at",
+      "place": "Charlotte",
+      "league": "nascar",
+      "series": "truck",
+      "name": "Charlotte",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-10-09-florida-state-louisville",
       "date": "2026-10-09",
       "et": "19:00",
@@ -171,6 +201,36 @@
       "site": "at",
       "place": null,
       "league": "cfb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-10-f1-sprint-singapore-grand-prix",
+      "date": "2026-10-10",
+      "et": "05:00",
+      "away": null,
+      "home": null,
+      "network": "Apple TV",
+      "site": "at",
+      "place": "Singapore Grand Prix",
+      "league": "f1",
+      "series": "sprint",
+      "name": "Singapore Grand Prix",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-10-f1-quali-singapore-grand-prix",
+      "date": "2026-10-10",
+      "et": "09:00",
+      "away": null,
+      "home": null,
+      "network": "Apple TV",
+      "site": "at",
+      "place": "Singapore Grand Prix",
+      "league": "f1",
+      "series": "quali",
+      "name": "Singapore Grand Prix",
       "phx": null,
       "ticketChannel": null
     },
@@ -539,6 +599,21 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-10-10-nascar-oreilly-charlotte",
+      "date": "2026-10-10",
+      "et": "16:00",
+      "away": null,
+      "home": null,
+      "network": "CW",
+      "site": "at",
+      "place": "Charlotte",
+      "league": "nascar",
+      "series": "oreilly",
+      "name": "Charlotte",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-10-10-rice-east-carolina",
       "date": "2026-10-10",
       "et": "16:00",
@@ -799,6 +874,21 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-10-11-f1-race-singapore-grand-prix",
+      "date": "2026-10-11",
+      "et": "08:00",
+      "away": null,
+      "home": null,
+      "network": "Apple TV",
+      "site": "at",
+      "place": "Singapore Grand Prix",
+      "league": "f1",
+      "series": "race",
+      "name": "Singapore Grand Prix",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-10-11-eagles-jaguars",
       "date": "2026-10-11",
       "et": "09:30",
@@ -916,6 +1006,21 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-10-11-nascar-cup-charlotte",
+      "date": "2026-10-11",
+      "et": "15:00",
+      "away": null,
+      "home": null,
+      "network": "USA",
+      "site": "at",
+      "place": "Charlotte",
+      "league": "nascar",
+      "series": "cup",
+      "name": "Charlotte",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-10-11-broncos-chargers",
       "date": "2026-10-11",
       "et": "16:05",
@@ -980,5 +1085,6 @@
       "phx": null,
       "ticketChannel": null
     }
-  ]
+  ],
+  "racingPulled": "2026-10-08T04:28Z"
 }

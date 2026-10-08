@@ -97,6 +97,29 @@ If you only have some numbers, stamp those. The rest stay `9552–9567`. The boa
 
 ---
 
+**SPORTS HOME + NASCAR + F1**
+
+Phone opens on big sport buttons: College Football, NFL, NASCAR, Formula 1.
+Last sport is remembered. **Sports** goes back to the buttons.
+FIND A TEAM is CFB/NFL only. No driver picker.
+
+NASCAR board: Truck (Craftsman), O’Reilly (old Xfinity, CW), Cup.
+F1 board: Sprint Shootout / Sprint / Qualifying / Race. Practice is skipped.
+2026 F1 US rights are Apple TV → **Streaming Only** (no fake DTV #).
+
+Tue/Fri football pull **keeps** nascar/f1 rows, then `pull_racing.py` refreshes them.
+A racing miss does not fail the football push.
+
+```
+cd C:\Users\steve\GitHubFIles\bar-guide
+python pull_racing.py
+git add src/data/slate.json
+git commit -m "Racing slate"
+git push
+```
+
+---
+
 **WHAT YOU NEVER DO**
 
 - Don’t type 70 games
