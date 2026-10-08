@@ -2,7 +2,8 @@
 const ET_TO_PHX = 3;
 
 export function formatPhx(etHHMM) {
-  const [h, m] = etHHMM.split(":").map(Number);
+  if (!etHHMM) return "";
+  const [h, m] = String(etHHMM).split(":").map(Number);
   let hour = h - ET_TO_PHX;
   const nextDay = hour < 0;
   if (hour < 0) hour += 24;
@@ -14,7 +15,8 @@ export function formatPhx(etHHMM) {
 }
 
 export function formatEt(etHHMM) {
-  const [h, m] = etHHMM.split(":").map(Number);
+  if (!etHHMM) return "";
+  const [h, m] = String(etHHMM).split(":").map(Number);
   const ampm = h >= 12 ? "p" : "a";
   let h12 = h % 12;
   if (h12 === 0) h12 = 12;

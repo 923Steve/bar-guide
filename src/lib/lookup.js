@@ -4,8 +4,9 @@ import { applyPhxDisplay, phxTag } from "./phx.js";
 import { GAMES } from "./slate.js";
 
 export function teamName(id) {
+  if (!id) return "";
   if (TEAM_BY_ID[id]) return TEAM_BY_ID[id].name;
-  return id
+  return String(id)
     .split("-")
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");

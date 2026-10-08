@@ -1,6 +1,6 @@
 import { PINS, TEAMS } from "./data/teams.js";
 import { dayHeader, formatEt, formatPhx } from "./lib/time.js";
-import { decorate, decoratedSlate, gamesForTeam } from "./lib/lookup.js";
+import { decorate, decoratedSlate, gamesForTeam } from "./lib/lookup.js?v=20261007";
 import { setSlate } from "./lib/slate.js";
 
 const LIVE_URL = "https://923steve.github.io/bar-guide/";
