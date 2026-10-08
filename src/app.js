@@ -1,6 +1,6 @@
 import { PINS, TEAMS } from "./data/teams.js";
 import { dayHeader, formatEt, formatPhx } from "./lib/time.js";
-import { decorate, decoratedSlate, gamesForTeam } from "./lib/lookup.js?v=20261007c";
+import { decorate, decoratedSlate, gamesForTeam } from "./lib/lookup.js";
 import { setSlate } from "./lib/slate.js";
 
 const LIVE_URL = "https://923steve.github.io/bar-guide/";
@@ -365,15 +365,8 @@ async function boot() {
   } catch {
     setSlate({ note: "No slate loaded", games: [] });
   }
-  try {
-    const last = localStorage.getItem(LAST_SPORT_KEY);
-    if (last && SPORT_BY_ID[last]) {
-      state.screen = "slate";
-      state.league = last;
-    }
-  } catch {
-    /* first visit */
-  }
+  forgetSport();
+  state.screen = "home";
   render();
 }
 
