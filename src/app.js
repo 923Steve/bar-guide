@@ -221,7 +221,7 @@ function dayHtml([date, games]) {
               <span class="ch">${g.channel ? g.channel : "Streaming Only"}</span>
               ${g.overflow ? `<span class="overflow"> check ${g.channel}-1</span>` : ""}
             </div>
-            ${g.league === "nascar" || g.league === "f1" ? "" : `<div class="et">${formatEt(g.et)}</div>`}
+            <div class="et">${formatEt(g.et)}</div>
           </li>
         `).join("")}
       </ul>
