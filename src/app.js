@@ -214,14 +214,14 @@ function dayHtml([date, games]) {
           <li class="row">
             <div class="matchup">${esc(g.matchup)}${g.phxLabel ? ` <span class="tag tag-${g.phx}">${esc(g.phxLabel)}</span>` : ""}</div>
             <div class="meta">
-              <span>${formatPhx(g.et)}</span>
+              <span class="when">${formatPhx(g.et)}</span>
               <span class="dot">·</span>
               <span class="net">${esc(g.netLabel)}</span>
               <span class="dot">·</span>
               <span class="ch">${g.channel ? g.channel : "Streaming Only"}</span>
               ${g.overflow ? `<span class="overflow"> check ${g.channel}-1</span>` : ""}
             </div>
-            <div class="et">${formatEt(g.et)}</div>
+            ${g.league === "nascar" || g.league === "f1" ? "" : `<div class="et">${formatEt(g.et)}</div>`}
           </li>
         `).join("")}
       </ul>

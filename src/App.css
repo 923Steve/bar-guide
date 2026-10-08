@@ -112,6 +112,7 @@ body {
 }
 .matchup { font-size: 16px; font-weight: 550; }
 .meta { margin-top: 4px; font-size: 14px; }
+.when { font-weight: 800; }
 .net { font-weight: 700; }
 .ch { font-weight: 700; }
 .overflow { color: #8a4b12; font-size: 12px; }
