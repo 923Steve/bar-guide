@@ -69,5 +69,19 @@ export function decorate(game, all = GAMES) {
 }
 
 export function decoratedSlate() {
-  return GAMES.map((g) => decorate(g));
+  return GAMES.map((g) => {
+    try {
+      return decorate(g);
+    } catch {
+      return {
+        ...g,
+        matchup: g.name || g.place || g.id || "Game",
+        netLabel: g.network || "TBD",
+        channel: null,
+        overflow: false,
+        phx: null,
+        phxLabel: null,
+      };
+    }
+  });
 }

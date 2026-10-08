@@ -1,6 +1,6 @@
 import { PINS, TEAMS } from "./data/teams.js";
 import { dayHeader, formatEt, formatPhx } from "./lib/time.js";
-import { decorate, decoratedSlate, gamesForTeam } from "./lib/lookup.js?v=20261007";
+import { decorate, decoratedSlate, gamesForTeam } from "./lib/lookup.js?v=20261007c";
 import { setSlate } from "./lib/slate.js";
 
 const LIVE_URL = "https://923steve.github.io/bar-guide/";
@@ -32,16 +32,27 @@ function isTeamSport(league) {
   return league === "cfb" || league === "nfl";
 }
 
-function openSport(id) {
-  state.screen = "slate";
-  state.league = id;
-  state.selected = null;
-  state.pickerOpen = false;
+function rememberSport(id) {
   try {
     localStorage.setItem(LAST_SPORT_KEY, id);
   } catch {
     /* private mode */
   }
+}
+
+function forgetSport() {
+  try {
+    localStorage.removeItem(LAST_SPORT_KEY);
+  } catch {
+    /* private mode */
+  }
+}
+
+function openSport(id) {
+  state.screen = "slate";
+  state.league = id;
+  state.selected = null;
+  state.pickerOpen = false;
   render();
 }
 
@@ -50,15 +61,23 @@ function goHome() {
   state.selected = null;
   state.pickerOpen = false;
   state.installOpen = false;
+  forgetSport();
   render();
 }
 
 function render() {
-  if (state.screen === "home") {
+  try {
+    if (state.screen === "home") {
+      renderHome();
+      return;
+    }
+    renderSlate();
+    rememberSport(state.league);
+  } catch {
+    state.screen = "home";
+    forgetSport();
     renderHome();
-    return;
   }
-  renderSlate();
 }
 
 function renderHome() {
