@@ -50,16 +50,18 @@ body {
 .sport-label { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }
 .sport-hint { font-size: 13px; font-weight: 600; opacity: 0.85; }
 .back {
-  border: 1px solid var(--line);
-  background: var(--card);
-  color: var(--ink);
-  border-radius: 999px;
-  padding: 6px 12px;
+  width: 100%;
+  border: 0;
+  background: #9b1c1c;
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px 18px;
   font: inherit;
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 14px;
 }
+.back-bottom { margin-top: 28px; }
 
 .league-toggle { display: flex; gap: 6px; flex-wrap: wrap; }
 .league-toggle button,

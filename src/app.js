@@ -48,15 +48,7 @@ function forgetSport() {
   }
 }
 
-function openSport(id) {
-  state.screen = "slate";
-  state.league = id;
-  state.selected = null;
-  state.pickerOpen = false;
-  render();
-}
-
-function goHome() {
+function showHome() {
   state.screen = "home";
   state.selected = null;
   state.pickerOpen = false;
@@ -64,6 +56,30 @@ function goHome() {
   forgetSport();
   render();
 }
+
+function openSport(id) {
+  state.screen = "slate";
+  state.league = id;
+  state.selected = null;
+  state.pickerOpen = false;
+  if (!history.state || history.state.screen !== "slate" || history.state.league !== id) {
+    history.pushState({ screen: "slate", league: id }, "");
+  }
+  render();
+}
+
+function goHome() {
+  showHome();
+  try {
+    history.replaceState({ screen: "home" }, "");
+  } catch {
+    /* ignore */
+  }
+}
+
+window.addEventListener("popstate", () => {
+  if (state.screen !== "home") showHome();
+});
 
 function render() {
   try {
@@ -123,7 +139,7 @@ function renderSlate() {
     <div class="page">
       <header class="top">
         <div>
-          <button class="back" data-act="home">Sports</button>
+          <button class="back" data-act="home">Go back to sports</button>
           <div class="brand">${esc(sport.label)}</div>
         </div>
       </header>
@@ -138,12 +154,15 @@ function renderSlate() {
 
       ${emptyHtml(hits, list)}
       ${groups.map(dayHtml).join("")}
+      ${!state.pickerOpen && !state.installOpen ? `<button class="back back-bottom" data-act="home">Go back to sports</button>` : ""}
       ${state.pickerOpen ? pickerHtml() : ""}
       ${state.installOpen ? installHtml() : ""}
     </div>
   `;
 
-  root.querySelector("[data-act=home]")?.addEventListener("click", goHome);
+  root.querySelectorAll("[data-act=home]").forEach((b) => {
+    b.addEventListener("click", goHome);
+  });
   root.querySelector("[data-act=open-picker]")?.addEventListener("click", () => {
     state.pickerOpen = true;
     state.pickerTab = state.selected?.league || state.league;
