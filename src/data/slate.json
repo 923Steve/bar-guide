@@ -3,7 +3,7 @@
   "year": 2026,
   "cfbWeek": 6,
   "nflWeek": 5,
-  "pulled": "2026-10-06T13:15Z",
+  "pulled": "2026-10-09T13:15Z",
   "games": [
     {
       "id": "2026-10-06-southern-miss-troy",
@@ -34,7 +34,7 @@
     {
       "id": "2026-10-07-new-mexico-state-fiu",
       "date": "2026-10-07",
-      "et": "19:30",
+      "et": "20:04",
       "away": "new-mexico-state",
       "home": "fiu",
       "network": "ESPN2",
@@ -835,19 +835,6 @@
       "ticketChannel": null
     },
     {
-      "id": "2026-10-10-hawaii-arizona-state",
-      "date": "2026-10-10",
-      "et": "21:30",
-      "away": "hawaii",
-      "home": "arizona-state",
-      "network": "FS1",
-      "site": "at",
-      "place": null,
-      "league": "cfb",
-      "phx": null,
-      "ticketChannel": null
-    },
-    {
       "id": "2026-10-10-kansas-utah",
       "date": "2026-10-10",
       "et": "22:15",
@@ -867,6 +854,19 @@
       "away": "boise-state",
       "home": "fresno-state",
       "network": "CW",
+      "site": "at",
+      "place": null,
+      "league": "cfb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-10-hawaii-arizona-state",
+      "date": "2026-10-10",
+      "et": "22:30",
+      "away": "hawaii",
+      "home": "arizona-state",
+      "network": "FS1",
       "site": "at",
       "place": null,
       "league": "cfb",
@@ -1086,5 +1086,5 @@
       "ticketChannel": null
     }
   ],
-  "racingPulled": "2026-10-08T04:39Z"
+  "racingPulled": "2026-10-09T13:15Z"
 }
