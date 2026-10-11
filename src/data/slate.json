@@ -911,7 +911,7 @@
       "site": "at",
       "place": null,
       "league": "nfl",
-      "phx": null,
+      "phx": "local",
       "ticketChannel": null
     },
     {
@@ -976,7 +976,7 @@
       "site": "at",
       "place": null,
       "league": "nfl",
-      "phx": null,
+      "phx": "local",
       "ticketChannel": null
     },
     {
@@ -1056,7 +1056,7 @@
       "site": "at",
       "place": null,
       "league": "nfl",
-      "phx": null,
+      "phx": "local",
       "ticketChannel": null
     },
     {
