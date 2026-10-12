@@ -38,7 +38,13 @@ try {
 
     git commit -m "Sunday Phoenix local stamps"
     if ($LASTEXITCODE -ne 0) { throw "git commit failed" }
-    git push
+    # git push prints its success message ("To https://...") on STDERR, and
+    # with ErrorActionPreference=Stop that used to throw AFTER the push had
+    # already landed -- every good Sunday was logged as SUNDAY LOCALS FAILED
+    # (same bug fixed in friday_run.ps1 on 9/15; this script was missed).
+    # Route through cmd so stderr is just text; judge by exit code only.
+    $pushOut = cmd /c "git push 2>&1"
+    Write-Host ($pushOut -join "`n")
     if ($LASTEXITCODE -ne 0) { throw "git push failed" }
     Write-Host "Pushed. Phone updates in about a minute."
 } catch {
