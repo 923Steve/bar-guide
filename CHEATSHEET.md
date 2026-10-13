@@ -109,6 +109,8 @@ F1 board: Sprint Shootout / Sprint / Qualifying / Race. Practice is skipped.
 
 Tue/Fri football pull **keeps** nascar/f1 rows, then `pull_racing.py` refreshes them.
 A racing miss does not fail the football push.
+ESPN often leaves Cup / O’Reilly / F1 stuck on last weekend after the race.
+The pull skips finished events and asks ESPN for the next calendar date.
 
 ```
 cd C:\Users\steve\GitHubFIles\bar-guide
