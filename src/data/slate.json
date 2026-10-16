@@ -3,7 +3,7 @@
   "year": 2026,
   "cfbWeek": 7,
   "nflWeek": 6,
-  "pulled": "2026-10-13T13:15Z",
+  "pulled": "2026-10-16T13:15Z",
   "games": [
     {
       "id": "2026-10-13-delaware-middle-tennessee",
@@ -1095,5 +1095,5 @@
       "ticketChannel": null
     }
   ],
-  "racingPulled": "2026-10-13T14:36Z"
+  "racingPulled": "2026-10-16T13:15Z"
 }
