@@ -904,7 +904,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9558"
     },
     {
       "id": "2026-10-18-jets-patriots",
@@ -917,7 +917,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9554"
     },
     {
       "id": "2026-10-18-panthers-eagles",
@@ -930,7 +930,7 @@
       "place": null,
       "league": "nfl",
       "phx": "local",
-      "ticketChannel": null
+      "ticketChannel": "9555"
     },
     {
       "id": "2026-10-18-ravens-browns",
@@ -943,7 +943,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9557"
     },
     {
       "id": "2026-10-18-saints-giants",
@@ -956,7 +956,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9559"
     },
     {
       "id": "2026-10-18-steelers-buccaneers",
@@ -969,7 +969,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9556"
     },
     {
       "id": "2026-10-18-titans-colts",
@@ -982,7 +982,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9560"
     },
     {
       "id": "2026-10-18-nascar-cup-phoenix",
@@ -1010,7 +1010,7 @@
       "place": null,
       "league": "nfl",
       "phx": "local",
-      "ticketChannel": null
+      "ticketChannel": "9554"
     },
     {
       "id": "2026-10-18-bills-raiders",
@@ -1023,7 +1023,7 @@
       "place": null,
       "league": "nfl",
       "phx": null,
-      "ticketChannel": null
+      "ticketChannel": "9556"
     },
     {
       "id": "2026-10-18-chargers-chiefs",
@@ -1036,7 +1036,7 @@
       "place": null,
       "league": "nfl",
       "phx": "local",
-      "ticketChannel": null
+      "ticketChannel": "9555"
     },
     {
       "id": "2026-10-18-cowboys-packers",
