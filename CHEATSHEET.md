@@ -95,6 +95,8 @@ Or dump the list in a chat: `Packers 9554, Bills 9558, ...` and we stamp them.
 
 If you only have some numbers, stamp those. The rest stay `9552–9567`. The board still works.
 
+The **bar box** is gospel, not the desk/506 matrix. Week 6 the dump sat mix on 9552–9553 and started games at 9554; the wall was **one too high** (Bears @ Falcons was 9558 on the phone, wrong at the bar). If the dump starts games at 9554, subtract one before stamping. Locals stay FOX 10 / CBS 5.
+
 ---
 
 **SPORTS HOME + NASCAR + F1**
