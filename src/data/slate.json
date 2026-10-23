@@ -3,7 +3,7 @@
   "year": 2026,
   "cfbWeek": 8,
   "nflWeek": 7,
-  "pulled": "2026-10-20T13:15Z",
+  "pulled": "2026-10-23T13:15Z",
   "games": [
     {
       "id": "2026-10-20-middle-tennessee-fiu",
@@ -1017,5 +1017,5 @@
       "ticketChannel": null
     }
   ],
-  "racingPulled": "2026-10-20T13:15Z"
+  "racingPulled": "2026-10-23T13:15Z"
 }
