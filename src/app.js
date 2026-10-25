@@ -9,7 +9,7 @@ const LAST_SPORT_KEY = "wmg-sport";
 
 const SPORTS = [
   { id: "cfb", label: "College Football", hint: "Find a team. Punch the channel." },
-  { id: "nfl", label: "NFL", hint: "Locals, Ticket, national." },
+  { id: "nfl", label: "NFL", hint: "Locals, Ticket 9554–9567." },
   { id: "nascar", label: "NASCAR", hint: "Truck, O'Reilly, Cup." },
   { id: "f1", label: "Formula 1", hint: "Qualifying, sprint, race." },
 ];

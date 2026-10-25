@@ -80,22 +80,11 @@ powershell -ExecutionPolicy Bypass -File .\sunday_run.ps1
 
 If a local is wrong, tell a chat `Sunday stamp FOX 10 is Bears` and we fix that row.
 
-**You got all the NFL Ticket numbers** (9552–9567 board):
+**NFL Ticket is a block, not a per-game number.**
 
-On each Ticket game in `slate.json` set `"ticketChannel": "9554"` (whatever the board says). Then:
+Out-of-market Sunday games show **9554–9567**. Staff scan that range on the receiver guide. Do not stamp a single 95xx. Week 6 proved the desk matrix is one off the wall.
 
-```
-cd C:\Users\steve\GitHubFIles\bar-guide
-git add src/data/slate.json
-git commit -m "Sunday Ticket numbers"
-git push
-```
-
-Or dump the list in a chat: `Packers 9554, Bills 9558, ...` and we stamp them.
-
-If you only have some numbers, stamp those. The rest stay `9552–9567`. The board still works.
-
-Stamp the dump as given. Do not auto-shift. Week 6 the bar looked one off (Bears @ Falcons 9558 on the phone). Confirm next Sunday against the box. If it is still wrong, drop the 95xx and show **check NFL ticket guide** on non-local Ticket games. Locals stay FOX 10 / CBS 5.
+Locals stay FOX 10 / CBS 5 from the Sunday 6:15 stamp. RedZone is 9551. TNF Prime is 9550. NFL Network is 212.
 
 ---
 

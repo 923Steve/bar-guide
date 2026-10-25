@@ -7,7 +7,7 @@ Phone-first “where’s the game” board for Arizona sports bars.
 - Tap-a-team picker on CFB/NFL only — no typing (Midwest, Dakotas, conferences)
 - NASCAR: Truck, O’Reilly, Cup. F1: quali / sprint / race (no driver picker)
 - “Not offered” is a valid answer
-- NFL rows tag Phoenix: LOCAL (FOX 10 / CBS 5), NFL TICKET (9552–9567), NATIONAL, STREAM / DTV, or REGIONAL (10 or NFL Ticket until Friday stamps the local pick)
+- NFL rows tag Phoenix: LOCAL (FOX 10 / CBS 5), NFL TICKET (9554–9567 guide block), NATIONAL, STREAM / DTV, or REGIONAL until Sunday stamps the local pick
 
 No Node/npm. Python 3 is enough.
 
@@ -53,7 +53,7 @@ Check the phone with coffee. Log: `logs\slate_pull.log`.
 
 ### Sunday 6:15 (Phoenix locals)
 
-Windows task **Bar Guide Sunday Locals** reads FOX 10 / CBS 5 listings and stamps `"phx": "local"`. Ticket numbers are still you.
+Windows task **Bar Guide Sunday Locals** reads FOX 10 / CBS 5 listings and stamps `"phx": "local"`. Ticket games show the 9554–9567 block, not a per-game number.
 
 ```bash
 powershell -ExecutionPolicy Bypass -File .\register_sunday_locals.ps1

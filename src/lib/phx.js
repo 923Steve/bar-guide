@@ -5,14 +5,16 @@
  *
  * PHX = Cardinals market.
  *   Cardinals Sunday afternoon → FOX 10 or CBS 5, never Ticket.
- *   Same network + same window, other games → Ticket 9552–9567.
+ *   Same network + same window, other games → Ticket 9554–9567.
  *   FOX/CBS when Cards are not on that net/window → one is local, rest
- *   Ticket. Until Friday we stamp `phx: "local"` on the pick, those
- *   rows stay REGIONAL ("10 or Ticket").
+ *   Ticket. Until Sunday we stamp `phx: "local"` on the pick, leftover
+ *   windows stay REGIONAL ("10 or 9554–9567"). After the stamp, a
+ *   window with no OTA is Ticket (scan the guide).
  *   NBC / ESPN / ABC / NFLN → NATIONAL (ESPN 206, NFLN 212).
  *   Prime TNF → DTV 9550 (Cardinals also get a local simulcast).
  *   Netflix → STREAM (no DTV # unless Cards are in it — then OTA too).
- *   Ticket game channels are 9552–9567; RedZone is 9551.
+ *   Do not invent a per-game 95xx. Out-of-market is the 9554–9567 block.
+ *   RedZone is 9551.
  *
  * CFB is not this ruleset.
  */
@@ -21,6 +23,7 @@ const LOCAL_TEAM = "cardinals";
 const NATIONAL_NETS = new Set(["NBC", "ESPN", "ABC", "NFLN"]);
 const STREAM_NETS = new Set(["Prime", "Netflix"]);
 const LOCAL_NETS = new Set(["FOX", "CBS"]);
+export const TICKET_BLOCK = "9554–9567";
 
 export function netKey(network) {
   return String(network || "").split("/")[0].trim();
@@ -51,6 +54,10 @@ function localOnNetWindow(game, all) {
   );
 }
 
+function localsStampedOnDate(game, all) {
+  return all.some((g) => g.league === "nfl" && g.date === game.date && g.phx === "local");
+}
+
 /** local | ticket | national | stream | regional | null */
 export function phxTag(game, all = []) {
   if (game.league !== "nfl") return null;
@@ -64,8 +71,10 @@ export function phxTag(game, all = []) {
   if (LOCAL_NETS.has(net)) {
     if (involves(game, LOCAL_TEAM) || game.phx === "local") return "local";
     if (localOnNetWindow(game, all)) return "ticket";
-    // Human-stamped 95xx means the board put it on Ticket, even if
-    // this window has no Phoenix OTA (CBS 5 late today).
+    // Sunday stamp already ran and this window has no FOX 10 / CBS 5
+    // pick — staff scan 9554–9567. Midweek leftover windows stay
+    // REGIONAL until that stamp.
+    if (localsStampedOnDate(game, all)) return "ticket";
     if (game.ticketChannel) return "ticket";
     return "regional";
   }
@@ -97,7 +106,7 @@ export function applyPhxDisplay(game, tag, ch) {
       phx: tag,
       phxLabel: "NFL TICKET",
       netLabel: "NFL Ticket",
-      channel: game.ticketChannel || "9552–9567",
+      channel: TICKET_BLOCK,
     };
   }
 
@@ -126,6 +135,6 @@ export function applyPhxDisplay(game, tag, ch) {
     phx: tag,
     phxLabel: "REGIONAL",
     netLabel: ch.label,
-    channel: `${localCh} or NFL Ticket`,
+    channel: `${localCh} or ${TICKET_BLOCK}`,
   };
 }
