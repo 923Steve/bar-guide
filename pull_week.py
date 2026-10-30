@@ -48,6 +48,8 @@ NET_MAP = {
     "ESPN2": "ESPN2",
     "ESPNU": "ESPNU",
     "ESPN+": "ESPN+",
+    "ESPN PLUS": "ESPN+",
+    "ESPNPLUS": "ESPN+",
     "ESPN/DISNEY+": "ESPN",
     "ABC": "ABC",
     "ABC/DISNEY+": "ABC",

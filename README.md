@@ -25,7 +25,7 @@ Add to Home Screen after opening the live URL.
 
 ## Weekly data
 
-Games live in `src/data/slate.json`. Channel numbers live in `src/data/channels.js`.  
+Games live in `src/data/slate.json`. Channel numbers live in `src/data/channels.js`. ESPN+ is a block: Bar 9519–9525 · Home 210-1–7.  
 Phoenix NFL tags are computed in `src/lib/phx.js` — do not hand-tag every row.
 
 ### Tuesday + Friday

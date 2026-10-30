@@ -22,7 +22,11 @@ export const CHANNELS = {
   NFLN: { label: "NFL Network", channel: "212" },
   Ticket: { label: "NFL Ticket", channel: "9554–9567", note: "out-of-market block on the receiver guide" },
   RedZone: { label: "RedZone", channel: "9551" },
-  "ESPN+": { label: "ESPN+", channel: null },
+  "ESPN+": {
+    label: "ESPN+",
+    channel: "Bar 9519–9525 · Home 210-1–7",
+    note: "commercial ESPN+ for Business block vs residential satellite leftover",
+  },
   "SECN+": { label: "SEC Network+", channel: null },
   "B1G+": { label: "Big Ten+", channel: null },
   ACCNX: { label: "ACC Network Extra", channel: null },

@@ -97,6 +97,7 @@ FIND A TEAM is CFB / CBB / NFL. Same college pins as football (Midwest, Dakotas)
 NASCAR board: Truck (Craftsman), O’Reilly (old Xfinity, CW), Cup.
 F1 board: Sprint Shootout / Sprint / Qualifying / Race. Practice is skipped.
 2026 F1 US rights are Apple TV → **Streaming Only** (no fake DTV #).
+ESPN+ is a **block**, not a per-game number: **Bar 9519–9525** (ESPN+ for Business) · **Home 210-1–7** (residential leftover). Do not stamp 95xx per game. B1G+ / SECN+ / ACCNX / MW+ / YouTube stay Streaming Only.
 
 Tue/Fri football pull **keeps** nascar/f1/cbb rows, then `pull_racing.py` and `pull_cbb.py` refresh those.
 A racing or hoops miss does not fail the football push.

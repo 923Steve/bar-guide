@@ -1,4 +1,4 @@
-import { channelFor } from "../data/channels.js";
+import { channelFor } from "../data/channels.js?v=20261029d";
 import { TEAM_BY_ID } from "../data/teams.js";
 import { applyPhxDisplay, phxTag } from "./phx.js";
 import { GAMES } from "./slate.js";
