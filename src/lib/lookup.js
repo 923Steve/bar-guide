@@ -1,5 +1,5 @@
-import { channelFor } from "../data/channels.js?v=20261029e";
-import { TEAM_BY_ID } from "../data/teams.js";
+import { channelFor } from "../data/channels.js?v=20261029f";
+import { TEAM_BY_ID } from "../data/teams.js?v=20261029f";
 import { applyPhxDisplay, phxTag } from "./phx.js";
 import { GAMES } from "./slate.js";
 
@@ -66,7 +66,7 @@ export function decorate(game, all = GAMES) {
     matchup: matchupLine(game),
     netLabel: display.netLabel,
     channel: display.channel,
-    overflow: game.league !== "nfl" && clash.length > 0,
+    overflow: game.league !== "nfl" && clash.length > 0 && /^\d+$/.test(String(ch.channel || "")),
     phx: display.phx,
     phxLabel: display.phxLabel,
   };
