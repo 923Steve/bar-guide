@@ -1,2 +1,2 @@
-import "./app.js?v=20261029f";
-// cache bust 20261029f
+import "./app.js?v=20261029g";
+// cache bust 20261029g
