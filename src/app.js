@@ -345,7 +345,11 @@ function bindPicker() {
   root.querySelectorAll("[data-team]").forEach((b) => {
     b.addEventListener("click", () => {
       state.selected = TEAMS.find((t) => t.id === b.dataset.team);
-      state.league = state.selected.league;
+      if (state.selected?.league === "nfl") {
+        state.league = "nfl";
+      } else if (state.league !== "cbb") {
+        state.league = "cfb";
+      }
       state.pickerOpen = false;
       render();
     });
