@@ -71,6 +71,12 @@ NET_MAP = {
     "MW+": "MW+",
     "HBO MAX": "HBO Max",
     "TRUTV": "TNT",
+    "YOUTUBE": "YouTube",
+    "B1G+": "B1G+",
+    "BIG TEN+": "B1G+",
+    "ACCNX": "ACCNX",
+    "ACC NETWORK EXTRA": "ACCNX",
+    "ACC EXTRA": "ACCNX",
 }
 
 ABBR = {
@@ -145,6 +151,7 @@ ABBR = {
     "ARMY": "army",
     "NAVY": "navy",
     "ND": "notre-dame",
+    "GCU": "grand-canyon",
 }
 
 ALIASES = {
@@ -185,6 +192,7 @@ ALIASES = {
     "tcu": "tcu",
     "byu": "byu",
     "cal": "cal",
+    "grand canyon": "grand-canyon",
 }
 
 

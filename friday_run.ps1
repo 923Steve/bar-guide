@@ -39,6 +39,13 @@ try {
         Write-Host "RACING PULL FAILED ($LASTEXITCODE) - football slate still used."
     }
 
+    Write-Host "Pulling college basketball..."
+    $cbbOut = cmd /c "`"$python`" pull_cbb.py 2>&1"
+    Write-Host ($cbbOut -join "`n")
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "CBB PULL FAILED ($LASTEXITCODE) - football slate still used."
+    }
+
     git add src/data/slate.json
     $changed = @(git diff --cached --name-only)
     if (-not $changed) {

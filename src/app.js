@@ -9,6 +9,7 @@ const LAST_SPORT_KEY = "wmg-sport";
 
 const SPORTS = [
   { id: "cfb", label: "College Football", hint: "Find a team. Punch the channel." },
+  { id: "cbb", label: "College Basketball", hint: "Find a team. Punch the channel." },
   { id: "nfl", label: "NFL", hint: "Locals, Ticket 9554–9567." },
   { id: "nascar", label: "NASCAR", hint: "Truck, O'Reilly, Cup." },
   { id: "f1", label: "Formula 1", hint: "Qualifying, sprint, race." },
@@ -29,7 +30,7 @@ const state = {
 };
 
 function isTeamSport(league) {
-  return league === "cfb" || league === "nfl";
+  return league === "cfb" || league === "cbb" || league === "nfl";
 }
 
 function rememberSport(id) {
@@ -127,7 +128,7 @@ function renderHome() {
 function renderSlate() {
   const slate = decoratedSlate();
   const hits = state.selected
-    ? gamesForTeam(state.selected.id).map((g) => decorate(g))
+    ? gamesForTeam(state.selected.id, state.league).map((g) => decorate(g))
     : null;
   const list = state.selected
     ? hits
@@ -165,7 +166,7 @@ function renderSlate() {
   });
   root.querySelector("[data-act=open-picker]")?.addEventListener("click", () => {
     state.pickerOpen = true;
-    state.pickerTab = state.selected?.league || state.league;
+    state.pickerTab = state.selected?.league === "nfl" || state.league === "nfl" ? "nfl" : "cfb";
     render();
   });
   root.querySelector("[data-act=clear]")?.addEventListener("click", () => {
@@ -202,6 +203,9 @@ function emptyHtml(hits, list) {
   if (state.league === "f1") {
     return `<div class="empty">No Formula 1 on this slate yet.</div>`;
   }
+  if (state.league === "cbb") {
+    return `<div class="empty">No college basketball on this slate yet.</div>`;
+  }
   return "";
 }
 
@@ -231,7 +235,7 @@ function dayHtml([date, games]) {
 
 function pickerHtml() {
   const tab = state.pickerTab;
-  const pool = TEAMS.filter((t) => t.league === (tab === "nfl" ? "nfl" : "cfb"));
+  const pool = TEAMS.filter((t) => (tab === "nfl" ? t.league === "nfl" : t.league === "cfb" || t.league === "cbb"));
   const pins = PINS.filter((p) => pool.some((t) => t.pin === p.id));
   const alpha = [...pool].sort((a, b) => a.name.localeCompare(b.name));
   const letters = groupByLetter(alpha);

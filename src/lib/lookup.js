@@ -41,8 +41,12 @@ export function matchupLine(game) {
   return `${a} ${joiner} ${h}${place}`;
 }
 
-export function gamesForTeam(teamId) {
-  return GAMES.filter((g) => g.away === teamId || g.home === teamId);
+export function gamesForTeam(teamId, league) {
+  return GAMES.filter(
+    (g) =>
+      (g.away === teamId || g.home === teamId) &&
+      (!league || g.league === league),
+  );
 }
 
 export function decorate(game, all = GAMES) {

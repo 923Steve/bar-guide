@@ -22,6 +22,7 @@ export const TEAMS = [
   { id: "north-dakota-state", name: "North Dakota State", conf: "FCS", pin: "dakotas", league: "cfb" },
   { id: "south-dakota", name: "South Dakota", conf: "FCS", pin: "dakotas", league: "cfb" },
   { id: "south-dakota-state", name: "South Dakota State", conf: "FCS", pin: "dakotas", league: "cfb" },
+  { id: "grand-canyon", name: "Grand Canyon", conf: "WAC", league: "cbb" },
 
   // Rest of Big Ten
   { id: "maryland", name: "Maryland", conf: "Big Ten", league: "cfb" },

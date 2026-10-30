@@ -24,11 +24,14 @@ export const CHANNELS = {
   RedZone: { label: "RedZone", channel: "9551" },
   "ESPN+": { label: "ESPN+", channel: null },
   "SECN+": { label: "SEC Network+", channel: null },
+  "B1G+": { label: "Big Ten+", channel: null },
+  ACCNX: { label: "ACC Network Extra", channel: null },
   Peacock: { label: "Peacock", channel: null },
   "MW+": { label: "Mountain West+", channel: null },
   "HBO Max": { label: "HBO Max", channel: null },
   "Apple TV": { label: "Apple TV", channel: null },
   Netflix: { label: "Netflix", channel: null },
+  YouTube: { label: "YouTube", channel: null },
   Prime: { label: "Prime", channel: "9550", note: "TNF feed on DTV" },
 };
 

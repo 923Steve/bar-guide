@@ -90,24 +90,25 @@ Locals stay FOX 10 / CBS 5 from the Sunday 6:15 stamp. RedZone is 9551. TNF Prim
 
 **SPORTS HOME + NASCAR + F1**
 
-Phone opens on big sport buttons: College Football, NFL, NASCAR, Formula 1.
+Phone opens on big sport buttons: College Football, College Basketball, NFL, NASCAR, Formula 1.
 Last sport is remembered. **Sports** goes back to the buttons.
-FIND A TEAM is CFB/NFL only. No driver picker.
+FIND A TEAM is CFB / CBB / NFL. Same college pins as football (Midwest, Dakotas). Men’s hoops only. No driver picker.
 
 NASCAR board: Truck (Craftsman), O’Reilly (old Xfinity, CW), Cup.
 F1 board: Sprint Shootout / Sprint / Qualifying / Race. Practice is skipped.
 2026 F1 US rights are Apple TV → **Streaming Only** (no fake DTV #).
 
-Tue/Fri football pull **keeps** nascar/f1 rows, then `pull_racing.py` refreshes them.
-A racing miss does not fail the football push.
+Tue/Fri football pull **keeps** nascar/f1/cbb rows, then `pull_racing.py` and `pull_cbb.py` refresh those.
+A racing or hoops miss does not fail the football push.
 ESPN often leaves Cup / O’Reilly / F1 stuck on last weekend after the race.
 The pull skips finished events and asks ESPN for the next calendar date.
 
 ```
 cd C:\Users\steve\GitHubFIles\bar-guide
 python pull_racing.py
+python pull_cbb.py
 git add src/data/slate.json
-git commit -m "Racing slate"
+git commit -m "Racing and hoops slate"
 git push
 ```
 

@@ -2,9 +2,9 @@
 
 Phone-first “where’s the game” board for Arizona sports bars.
 
-- Home screen is big sport buttons (College Football, NFL, NASCAR, Formula 1)
+- Home screen is big sport buttons (College Football, College Basketball, NFL, NASCAR, Formula 1)
 - 506-style list (matchup / Phoenix time / network / DTV #)
-- Tap-a-team picker on CFB/NFL only — no typing (Midwest, Dakotas, conferences)
+- Tap-a-team picker on CFB/CBB/NFL — no typing (Midwest, Dakotas; CBB uses the same college list)
 - NASCAR: Truck, O’Reilly, Cup. F1: quali / sprint / race (no driver picker)
 - “Not offered” is a valid answer
 - NFL rows tag Phoenix: LOCAL (FOX 10 / CBS 5), NFL TICKET (9554–9567 guide block), NATIONAL, STREAM / DTV, or REGIONAL until Sunday stamps the local pick
@@ -47,7 +47,7 @@ powershell -ExecutionPolicy Bypass -File .\friday_run.ps1
 
 Force a week: `python pull_week.py --cfb-week 2 --nfl-week 1 --year 2026` then commit and push.
 
-NASCAR + F1: `python pull_racing.py` (Tue/Fri runner calls this after football). Football rows are kept if racing fails.
+NASCAR + F1: `python pull_racing.py`. College basketball: `python pull_cbb.py`. Tue/Fri runner calls both after football. Football rows are kept if either fails.
 
 Check the phone with coffee. Log: `logs\slate_pull.log`.
 
