@@ -621,17 +621,17 @@
       "ticketChannel": null
     },
     {
-      "id": "2026-10-31-f1-quali-city-grand-prix",
+      "id": "2026-10-31-f1-quali-mexico-city-grand-prix",
       "date": "2026-10-31",
       "et": "17:00",
       "away": "quali",
-      "home": "City Grand Prix",
+      "home": "Mexico City Grand Prix",
       "network": "Apple TV",
       "site": "at",
-      "place": "City Grand Prix",
+      "place": "Mexico City Grand Prix",
       "league": "f1",
       "series": "quali",
-      "name": "City Grand Prix",
+      "name": "Mexico City Grand Prix",
       "phx": null,
       "ticketChannel": null
     },
@@ -937,17 +937,17 @@
       "ticketChannel": null
     },
     {
-      "id": "2026-11-01-f1-race-city-grand-prix",
+      "id": "2026-11-01-f1-race-mexico-city-grand-prix",
       "date": "2026-11-01",
       "et": "15:00",
       "away": "race",
-      "home": "City Grand Prix",
+      "home": "Mexico City Grand Prix",
       "network": "Apple TV",
       "site": "at",
-      "place": "City Grand Prix",
+      "place": "Mexico City Grand Prix",
       "league": "f1",
       "series": "race",
-      "name": "City Grand Prix",
+      "name": "Mexico City Grand Prix",
       "phx": null,
       "ticketChannel": null
     },
@@ -1017,5 +1017,5 @@
       "ticketChannel": null
     }
   ],
-  "racingPulled": "2026-10-27T13:15Z"
+  "racingPulled": "2026-10-30T01:02Z"
 }

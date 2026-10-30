@@ -204,6 +204,7 @@ TWO_WORD_GPS = {
     "emilia romagna",
     "saudi arabia",
     "great britain",
+    "mexico city",
 }
 
 
