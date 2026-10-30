@@ -188,6 +188,40 @@ export const TEAMS = [
   { id: "buccaneers", name: "Buccaneers", conf: "NFC South", league: "nfl" },
   { id: "titans", name: "Titans", conf: "AFC South", league: "nfl" },
   { id: "commanders", name: "Commanders", conf: "NFC East", league: "nfl" },
+
+  // NHL — full 32. Desert pin is Havasu Knights + leftover Arizona / Utah.
+  { id: "ducks", name: "Ducks", conf: "West", league: "nhl" },
+  { id: "bruins", name: "Bruins", conf: "East", league: "nhl" },
+  { id: "sabres", name: "Sabres", conf: "East", league: "nhl" },
+  { id: "flames", name: "Flames", conf: "West", league: "nhl" },
+  { id: "hurricanes", name: "Hurricanes", conf: "East", league: "nhl" },
+  { id: "blackhawks", name: "Blackhawks", conf: "West", league: "nhl" },
+  { id: "avalanche", name: "Avalanche", conf: "West", league: "nhl" },
+  { id: "blue-jackets", name: "Blue Jackets", conf: "East", league: "nhl" },
+  { id: "stars", name: "Stars", conf: "West", league: "nhl" },
+  { id: "red-wings", name: "Red Wings", conf: "East", league: "nhl" },
+  { id: "oilers", name: "Oilers", conf: "West", league: "nhl" },
+  { id: "florida-panthers", name: "Panthers", conf: "East", league: "nhl" },
+  { id: "kings", name: "Kings", conf: "West", league: "nhl" },
+  { id: "wild", name: "Wild", conf: "West", league: "nhl" },
+  { id: "canadiens", name: "Canadiens", conf: "East", league: "nhl" },
+  { id: "predators", name: "Predators", conf: "West", league: "nhl" },
+  { id: "devils", name: "Devils", conf: "East", league: "nhl" },
+  { id: "islanders", name: "Islanders", conf: "East", league: "nhl" },
+  { id: "rangers", name: "Rangers", conf: "East", league: "nhl" },
+  { id: "senators", name: "Senators", conf: "East", league: "nhl" },
+  { id: "flyers", name: "Flyers", conf: "East", league: "nhl" },
+  { id: "penguins", name: "Penguins", conf: "East", league: "nhl" },
+  { id: "sharks", name: "Sharks", conf: "West", league: "nhl" },
+  { id: "kraken", name: "Kraken", conf: "West", league: "nhl" },
+  { id: "blues", name: "Blues", conf: "West", league: "nhl" },
+  { id: "lightning", name: "Lightning", conf: "East", league: "nhl" },
+  { id: "maple-leafs", name: "Maple Leafs", conf: "East", league: "nhl" },
+  { id: "mammoth", name: "Utah", conf: "West", pin: "desert", league: "nhl" },
+  { id: "canucks", name: "Canucks", conf: "West", league: "nhl" },
+  { id: "golden-knights", name: "Golden Knights", conf: "West", pin: "desert", league: "nhl" },
+  { id: "capitals", name: "Capitals", conf: "East", league: "nhl" },
+  { id: "winnipeg", name: "Jets", conf: "West", league: "nhl" },
 ];
 
 export const TEAM_BY_ID = Object.fromEntries(TEAMS.map((t) => [t.id, t]));
@@ -196,5 +230,6 @@ export const PINS = [
   { id: "midwest", label: "Midwest" },
   { id: "dakotas", label: "Dakotas" },
   { id: "nfc-north", label: "NFC North" },
+  { id: "desert", label: "Desert" },
 ];
 

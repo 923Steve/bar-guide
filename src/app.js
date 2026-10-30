@@ -1,6 +1,6 @@
-import { PINS, TEAMS } from "./data/teams.js";
+import { PINS, TEAMS } from "./data/teams.js?v=20261029e";
 import { dayHeader, formatEt, formatPhx } from "./lib/time.js";
-import { decorate, decoratedSlate, gamesForTeam } from "./lib/lookup.js?v=20261029d";
+import { decorate, decoratedSlate, gamesForTeam } from "./lib/lookup.js?v=20261029e";
 import { setSlate } from "./lib/slate.js";
 
 const LIVE_URL = "https://923steve.github.io/bar-guide/";
@@ -11,6 +11,7 @@ const SPORTS = [
   { id: "cfb", label: "College Football", hint: "Find a team. Punch the channel." },
   { id: "cbb", label: "College Basketball", hint: "Find a team. Punch the channel." },
   { id: "nfl", label: "NFL", hint: "Locals, Ticket 9554–9567." },
+  { id: "nhl", label: "NHL", hint: "Knights first. Punch the channel." },
   { id: "nascar", label: "NASCAR", hint: "Truck, O'Reilly, Cup." },
   { id: "f1", label: "Formula 1", hint: "Qualifying, sprint, race." },
 ];
@@ -30,7 +31,7 @@ const state = {
 };
 
 function isTeamSport(league) {
-  return league === "cfb" || league === "cbb" || league === "nfl";
+  return league === "cfb" || league === "cbb" || league === "nfl" || league === "nhl";
 }
 
 function rememberSport(id) {
@@ -166,7 +167,13 @@ function renderSlate() {
   });
   root.querySelector("[data-act=open-picker]")?.addEventListener("click", () => {
     state.pickerOpen = true;
-    state.pickerTab = state.selected?.league === "nfl" || state.league === "nfl" ? "nfl" : "cfb";
+    if (state.selected?.league === "nhl" || state.league === "nhl") {
+      state.pickerTab = "nhl";
+    } else if (state.selected?.league === "nfl" || state.league === "nfl") {
+      state.pickerTab = "nfl";
+    } else {
+      state.pickerTab = "cfb";
+    }
     render();
   });
   root.querySelector("[data-act=clear]")?.addEventListener("click", () => {
@@ -194,6 +201,9 @@ function emptyHtml(hits, list) {
     if (state.selected.league === "nfl") {
       return `<div class="empty"><strong>${esc(state.selected.name)}</strong> is not on this week’s loaded NFL slate.</div>`;
     }
+    if (state.selected.league === "nhl") {
+      return `<div class="empty"><strong>${esc(state.selected.name)}</strong> is not on this week’s loaded NHL slate.</div>`;
+    }
     return `<div class="empty"><strong>${esc(state.selected.name)}</strong> is not offered on this week’s slate.</div>`;
   }
   if (list && list.length) return "";
@@ -205,6 +215,9 @@ function emptyHtml(hits, list) {
   }
   if (state.league === "cbb") {
     return `<div class="empty">No college basketball on this slate yet.</div>`;
+  }
+  if (state.league === "nhl") {
+    return `<div class="empty">No NHL on this slate yet.</div>`;
   }
   return "";
 }
@@ -235,7 +248,11 @@ function dayHtml([date, games]) {
 
 function pickerHtml() {
   const tab = state.pickerTab;
-  const pool = TEAMS.filter((t) => (tab === "nfl" ? t.league === "nfl" : t.league === "cfb" || t.league === "cbb"));
+  const pool = TEAMS.filter((t) => {
+    if (tab === "nfl") return t.league === "nfl";
+    if (tab === "nhl") return t.league === "nhl";
+    return t.league === "cfb" || t.league === "cbb";
+  });
   const pins = PINS.filter((p) => pool.some((t) => t.pin === p.id));
   const alpha = [...pool].sort((a, b) => a.name.localeCompare(b.name));
   const letters = groupByLetter(alpha);
@@ -249,6 +266,7 @@ function pickerHtml() {
       <div class="league-toggle">
         <button data-tab="cfb" class="${tab === "cfb" ? "on" : ""}">College</button>
         <button data-tab="nfl" class="${tab === "nfl" ? "on" : ""}">NFL</button>
+        <button data-tab="nhl" class="${tab === "nhl" ? "on" : ""}">NHL</button>
       </div>
       ${pins.map((p) => `
         <div class="pin-block">
@@ -347,6 +365,8 @@ function bindPicker() {
       state.selected = TEAMS.find((t) => t.id === b.dataset.team);
       if (state.selected?.league === "nfl") {
         state.league = "nfl";
+      } else if (state.selected?.league === "nhl") {
+        state.league = "nhl";
       } else if (state.league !== "cbb") {
         state.league = "cfb";
       }

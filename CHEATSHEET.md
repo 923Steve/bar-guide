@@ -90,17 +90,18 @@ Locals stay FOX 10 / CBS 5 from the Sunday 6:15 stamp. RedZone is 9551. TNF Prim
 
 **SPORTS HOME + NASCAR + F1**
 
-Phone opens on big sport buttons: College Football, College Basketball, NFL, NASCAR, Formula 1.
+Phone opens on big sport buttons: College Football, College Basketball, NFL, NHL, NASCAR, Formula 1.
 Last sport is remembered. **Sports** goes back to the buttons.
-FIND A TEAM is CFB / CBB / NFL. Same college pins as football (Midwest, Dakotas). Men’s hoops only. No driver picker.
+FIND A TEAM is CFB / CBB / NFL / NHL. Same college pins as football (Midwest, Dakotas). NHL Desert pin is Golden Knights + Utah. Men’s hoops only. No driver picker.
 
 NASCAR board: Truck (Craftsman), O’Reilly (old Xfinity, CW), Cup.
 F1 board: Sprint Shootout / Sprint / Qualifying / Race. Practice is skipped.
 2026 F1 US rights are Apple TV → **Streaming Only** (no fake DTV #).
 ESPN+ is a **block**, not a per-game number: **Bar 9519–9525** (ESPN+ for Business) · **Home 210-1–7** (residential leftover). Do not stamp 95xx per game. B1G+ / SECN+ / ACCNX / MW+ / YouTube stay Streaming Only.
+NHL national: ESPN / TNT / ABC use the existing DTV #s. NHL Network is **215**. Do not invent a Knights “local” or any RSN number. ESPN+ hockey uses the same ESPN+ block.
 
-Tue/Fri football pull **keeps** nascar/f1/cbb rows, then `pull_racing.py` and `pull_cbb.py` refresh those.
-A racing or hoops miss does not fail the football push.
+Tue/Fri football pull **keeps** nascar/f1/cbb/nhl rows, then `pull_racing.py`, `pull_cbb.py`, and `pull_nhl.py` refresh those.
+A racing, hoops, or NHL miss does not fail the football push.
 ESPN often leaves Cup / O’Reilly / F1 stuck on last weekend after the race.
 The pull skips finished events and asks ESPN for the next calendar date.
 
@@ -108,8 +109,9 @@ The pull skips finished events and asks ESPN for the next calendar date.
 cd C:\Users\steve\GitHubFIles\bar-guide
 python pull_racing.py
 python pull_cbb.py
+python pull_nhl.py
 git add src/data/slate.json
-git commit -m "Racing and hoops slate"
+git commit -m "Racing, hoops, and NHL slate"
 git push
 ```
 

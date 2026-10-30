@@ -58,6 +58,58 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-10-29-blue-jackets-hurricanes",
+      "date": "2026-10-29",
+      "et": "19:00",
+      "away": "blue-jackets",
+      "home": "hurricanes",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-29-mammoth-penguins",
+      "date": "2026-10-29",
+      "et": "19:00",
+      "away": "mammoth",
+      "home": "penguins",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-29-winnipeg-lightning",
+      "date": "2026-10-29",
+      "et": "19:00",
+      "away": "winnipeg",
+      "home": "lightning",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-29-blackhawks-red-wings",
+      "date": "2026-10-29",
+      "et": "19:30",
+      "away": "blackhawks",
+      "home": "red-wings",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-10-29-fau-north-texas",
       "date": "2026-10-29",
       "et": "19:30",
@@ -84,6 +136,58 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-10-29-bruins-blues",
+      "date": "2026-10-29",
+      "et": "20:00",
+      "away": "bruins",
+      "home": "blues",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-29-canadiens-stars",
+      "date": "2026-10-29",
+      "et": "20:00",
+      "away": "canadiens",
+      "home": "stars",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-29-capitals-predators",
+      "date": "2026-10-29",
+      "et": "20:00",
+      "away": "capitals",
+      "home": "predators",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-29-islanders-wild",
+      "date": "2026-10-29",
+      "et": "20:00",
+      "away": "islanders",
+      "home": "wild",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-10-29-panthers-packers",
       "date": "2026-10-29",
       "et": "20:15",
@@ -93,6 +197,58 @@
       "site": "at",
       "place": null,
       "league": "nfl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-29-canucks-sharks",
+      "date": "2026-10-29",
+      "et": "22:00",
+      "away": "canucks",
+      "home": "sharks",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-29-sabres-ducks",
+      "date": "2026-10-29",
+      "et": "22:00",
+      "away": "sabres",
+      "home": "ducks",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-29-senators-kings",
+      "date": "2026-10-29",
+      "et": "22:00",
+      "away": "senators",
+      "home": "kings",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-30-devils-golden-knights",
+      "date": "2026-10-30",
+      "et": "18:00",
+      "away": "devils",
+      "home": "golden-knights",
+      "network": "NHLN",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -125,6 +281,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-10-30-winnipeg-florida-panthers",
+      "date": "2026-10-30",
+      "et": "19:00",
+      "away": "winnipeg",
+      "home": "florida-panthers",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-10-30-baylor-ucf",
       "date": "2026-10-30",
       "et": "19:30",
@@ -134,6 +303,19 @@
       "site": "at",
       "place": null,
       "league": "cfb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-30-kraken-flames",
+      "date": "2026-10-30",
+      "et": "20:00",
+      "away": "kraken",
+      "home": "flames",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -307,6 +489,32 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-10-31-blackhawks-bruins",
+      "date": "2026-10-31",
+      "et": "13:00",
+      "away": "blackhawks",
+      "home": "bruins",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-31-blues-red-wings",
+      "date": "2026-10-31",
+      "et": "13:00",
+      "away": "blues",
+      "home": "red-wings",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-10-31-marshall-old-dominion",
       "date": "2026-10-31",
       "et": "13:00",
@@ -342,6 +550,32 @@
       "site": "at",
       "place": null,
       "league": "cfb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-31-lightning-predators",
+      "date": "2026-10-31",
+      "et": "14:00",
+      "away": "lightning",
+      "home": "predators",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-31-oilers-islanders",
+      "date": "2026-10-31",
+      "et": "14:00",
+      "away": "oilers",
+      "home": "islanders",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -569,6 +803,32 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-10-31-sabres-kings",
+      "date": "2026-10-31",
+      "et": "16:00",
+      "away": "sabres",
+      "home": "kings",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-31-senators-sharks",
+      "date": "2026-10-31",
+      "et": "16:00",
+      "away": "senators",
+      "home": "sharks",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-10-31-south-dakota-south-dakota-state",
       "date": "2026-10-31",
       "et": "16:00",
@@ -662,6 +922,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-10-31-maple-leafs-canucks",
+      "date": "2026-10-31",
+      "et": "19:00",
+      "away": "maple-leafs",
+      "home": "canucks",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-10-31-oklahoma-state-iowa-state",
       "date": "2026-10-31",
       "et": "19:00",
@@ -671,6 +944,19 @@
       "site": "at",
       "place": null,
       "league": "cfb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-31-penguins-canadiens",
+      "date": "2026-10-31",
+      "et": "19:00",
+      "away": "penguins",
+      "home": "canadiens",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -766,6 +1052,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-10-31-blue-jackets-stars",
+      "date": "2026-10-31",
+      "et": "20:00",
+      "away": "blue-jackets",
+      "home": "stars",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-10-31-washington-nebraska",
       "date": "2026-10-31",
       "et": "20:00",
@@ -775,6 +1074,19 @@
       "site": "at",
       "place": null,
       "league": "cfb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-10-31-flames-avalanche",
+      "date": "2026-10-31",
+      "et": "22:00",
+      "away": "flames",
+      "home": "avalanche",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -935,6 +1247,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-01-winnipeg-hurricanes",
+      "date": "2026-11-01",
+      "et": "13:00",
+      "away": "winnipeg",
+      "home": "hurricanes",
+      "network": "NHLN",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-01-nascar-cup-martinsville",
       "date": "2026-11-01",
       "et": "14:00",
@@ -961,6 +1286,32 @@
       "league": "f1",
       "series": "race",
       "name": "Mexico City Grand Prix",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-01-wild-capitals",
+      "date": "2026-11-01",
+      "et": "15:30",
+      "away": "wild",
+      "home": "capitals",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-01-mammoth-flyers",
+      "date": "2026-11-01",
+      "et": "16:00",
+      "away": "mammoth",
+      "home": "flyers",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -1000,6 +1351,32 @@
       "site": "at",
       "place": null,
       "league": "nfl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-01-oilers-rangers",
+      "date": "2026-11-01",
+      "et": "18:00",
+      "away": "oilers",
+      "home": "rangers",
+      "network": "NHLN",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-01-senators-ducks",
+      "date": "2026-11-01",
+      "et": "20:00",
+      "away": "senators",
+      "home": "ducks",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -1342,6 +1719,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-02-golden-knights-bruins",
+      "date": "2026-11-02",
+      "et": "19:00",
+      "away": "golden-knights",
+      "home": "bruins",
+      "network": "NHLN",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-02-jackson-st-texas-tech",
       "date": "2026-11-02",
       "et": "19:00",
@@ -1468,6 +1858,19 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-02-red-wings-florida-panthers",
+      "date": "2026-11-02",
+      "et": "19:00",
+      "away": "red-wings",
+      "home": "florida-panthers",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -1715,6 +2118,19 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-02-avalanche-blackhawks",
+      "date": "2026-11-02",
+      "et": "20:00",
+      "away": "avalanche",
+      "home": "blackhawks",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -2031,6 +2447,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-02-flames-sharks",
+      "date": "2026-11-02",
+      "et": "21:00",
+      "away": "flames",
+      "home": "sharks",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-02-fresno-pacific-fresno-state",
       "date": "2026-11-02",
       "et": "21:00",
@@ -2304,6 +2733,32 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-03-avalanche-blue-jackets",
+      "date": "2026-11-03",
+      "et": "19:00",
+      "away": "avalanche",
+      "home": "blue-jackets",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-03-blues-rangers",
+      "date": "2026-11-03",
+      "et": "19:00",
+      "away": "blues",
+      "home": "rangers",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-03-coppin-st-virginia-tech",
       "date": "2026-11-03",
       "et": "19:00",
@@ -2313,6 +2768,19 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-03-golden-knights-penguins",
+      "date": "2026-11-03",
+      "et": "19:00",
+      "away": "golden-knights",
+      "home": "penguins",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -2330,6 +2798,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-03-mammoth-maple-leafs",
+      "date": "2026-11-03",
+      "et": "19:00",
+      "away": "mammoth",
+      "home": "maple-leafs",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-03-manhattan-kentucky",
       "date": "2026-11-03",
       "et": "19:00",
@@ -2339,6 +2820,32 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-03-red-wings-lightning",
+      "date": "2026-11-03",
+      "et": "19:00",
+      "away": "red-wings",
+      "home": "lightning",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-03-stars-capitals",
+      "date": "2026-11-03",
+      "et": "19:00",
+      "away": "stars",
+      "home": "capitals",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -2369,6 +2876,32 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-03-wild-flyers",
+      "date": "2026-11-03",
+      "et": "19:00",
+      "away": "wild",
+      "home": "flyers",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-03-winnipeg-canadiens",
+      "date": "2026-11-03",
+      "et": "19:00",
+      "away": "winnipeg",
+      "home": "canadiens",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-03-drexel-virginia",
       "date": "2026-11-03",
       "et": "19:30",
@@ -2378,6 +2911,19 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-03-oilers-devils",
+      "date": "2026-11-03",
+      "et": "19:30",
+      "away": "oilers",
+      "home": "devils",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -2430,6 +2976,19 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-03-hurricanes-predators",
+      "date": "2026-11-03",
+      "et": "20:00",
+      "away": "hurricanes",
+      "home": "predators",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -2512,6 +3071,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-03-ducks-canucks",
+      "date": "2026-11-03",
+      "et": "21:00",
+      "away": "ducks",
+      "home": "canucks",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-03-fullerton-san-diego-state",
       "date": "2026-11-03",
       "et": "22:00",
@@ -2564,6 +3136,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-04-blackhawks-florida-panthers",
+      "date": "2026-11-04",
+      "et": "19:30",
+      "away": "blackhawks",
+      "home": "florida-panthers",
+      "network": "TNT",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-04-champ-chrstn-ulm",
       "date": "2026-11-04",
       "et": "19:30",
@@ -2573,6 +3158,19 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-04-senators-sabres",
+      "date": "2026-11-04",
+      "et": "19:30",
+      "away": "senators",
+      "home": "sabres",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -2629,6 +3227,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-04-flames-kraken",
+      "date": "2026-11-04",
+      "et": "22:00",
+      "away": "flames",
+      "home": "kraken",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-04-north-dakota-state-saint-marys",
       "date": "2026-11-04",
       "et": "22:00",
@@ -2638,6 +3249,19 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-04-sharks-kings",
+      "date": "2026-11-04",
+      "et": "22:00",
+      "away": "sharks",
+      "home": "kings",
+      "network": "TNT",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -2707,6 +3331,45 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-05-blackhawks-lightning",
+      "date": "2026-11-05",
+      "et": "19:00",
+      "away": "blackhawks",
+      "home": "lightning",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-05-blues-devils",
+      "date": "2026-11-05",
+      "et": "19:00",
+      "away": "blues",
+      "home": "devils",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-05-bruins-penguins",
+      "date": "2026-11-05",
+      "et": "19:00",
+      "away": "bruins",
+      "home": "penguins",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-05-buffalo-pitt",
       "date": "2026-11-05",
       "et": "19:00",
@@ -2746,6 +3409,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-05-flyers-rangers",
+      "date": "2026-11-05",
+      "et": "19:00",
+      "away": "flyers",
+      "home": "rangers",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-05-georgia-state-charlotte",
       "date": "2026-11-05",
       "et": "19:00",
@@ -2755,6 +3431,19 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-05-golden-knights-red-wings",
+      "date": "2026-11-05",
+      "et": "19:00",
+      "away": "golden-knights",
+      "home": "red-wings",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -2785,6 +3474,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-05-hurricanes-islanders",
+      "date": "2026-11-05",
+      "et": "19:00",
+      "away": "hurricanes",
+      "home": "islanders",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-05-kalamazoo-western-michigan",
       "date": "2026-11-05",
       "et": "19:00",
@@ -2794,6 +3496,19 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-05-mammoth-canadiens",
+      "date": "2026-11-05",
+      "et": "19:00",
+      "away": "mammoth",
+      "home": "canadiens",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -2820,6 +3535,19 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-05-stars-blue-jackets",
+      "date": "2026-11-05",
+      "et": "19:00",
+      "away": "stars",
+      "home": "blue-jackets",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -2876,6 +3604,19 @@
       "ticketChannel": null
     },
     {
+      "id": "2026-11-05-canucks-winnipeg",
+      "date": "2026-11-05",
+      "et": "20:00",
+      "away": "canucks",
+      "home": "winnipeg",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
       "id": "2026-11-05-coastal-carolina-duke",
       "date": "2026-11-05",
       "et": "20:00",
@@ -2885,6 +3626,19 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-05-ducks-oilers",
+      "date": "2026-11-05",
+      "et": "20:00",
+      "away": "ducks",
+      "home": "oilers",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -3041,6 +3795,19 @@
       "site": "at",
       "place": null,
       "league": "cbb",
+      "phx": null,
+      "ticketChannel": null
+    },
+    {
+      "id": "2026-11-05-predators-avalanche",
+      "date": "2026-11-05",
+      "et": "21:30",
+      "away": "predators",
+      "home": "avalanche",
+      "network": "ESPN+",
+      "site": "at",
+      "place": null,
+      "league": "nhl",
       "phx": null,
       "ticketChannel": null
     },
@@ -3748,5 +4515,6 @@
     }
   ],
   "racingPulled": "2026-10-30T01:02Z",
-  "cbbPulled": "2026-10-30T01:20Z"
+  "cbbPulled": "2026-10-30T01:20Z",
+  "nhlPulled": "2026-10-30T01:49Z"
 }

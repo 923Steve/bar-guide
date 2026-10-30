@@ -79,6 +79,12 @@ NET_MAP = {
     "ACCNX": "ACCNX",
     "ACC NETWORK EXTRA": "ACCNX",
     "ACC EXTRA": "ACCNX",
+    "NHL NET": "NHLN",
+    "NHL NETWORK": "NHLN",
+    "NHLN": "NHLN",
+    "DISNEY+/ESPN+/HULU": "ESPN+",
+    "DISNEY+": "ESPN+",
+    "HULU": "ESPN+",
 }
 
 ABBR = {
@@ -271,11 +277,54 @@ NFL_ABBR = {
     "WAS": "commanders",
 }
 
+NHL_ABBR = {
+    "ANA": "ducks",
+    "BOS": "bruins",
+    "BUF": "sabres",
+    "CGY": "flames",
+    "CAR": "hurricanes",
+    "CHI": "blackhawks",
+    "COL": "avalanche",
+    "CBJ": "blue-jackets",
+    "DAL": "stars",
+    "DET": "red-wings",
+    "EDM": "oilers",
+    "FLA": "florida-panthers",
+    "LA": "kings",
+    "LAK": "kings",
+    "MIN": "wild",
+    "MTL": "canadiens",
+    "NSH": "predators",
+    "NJ": "devils",
+    "NJD": "devils",
+    "NYI": "islanders",
+    "NYR": "rangers",
+    "OTT": "senators",
+    "PHI": "flyers",
+    "PIT": "penguins",
+    "SJ": "sharks",
+    "SJS": "sharks",
+    "SEA": "kraken",
+    "STL": "blues",
+    "TB": "lightning",
+    "TBL": "lightning",
+    "TOR": "maple-leafs",
+    "UTA": "mammoth",
+    "UTAH": "mammoth",
+    "VAN": "canucks",
+    "VGK": "golden-knights",
+    "WSH": "capitals",
+    "WAS": "capitals",
+    "WPG": "winnipeg",
+}
+
 
 def team_id(team: dict, index: dict[str, str], league: str) -> str:
     abbr = (team.get("abbreviation") or "").upper()
     if league == "nfl" and abbr in NFL_ABBR:
         return NFL_ABBR[abbr]
+    if league == "nhl" and abbr in NHL_ABBR:
+        return NHL_ABBR[abbr]
     short = (team.get("shortDisplayName") or "").strip()
     loc = (team.get("location") or "").strip()
     for key in (short.lower(), slugify(short), loc.lower(), slugify(loc)):
