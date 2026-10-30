@@ -1,5 +1,5 @@
 import { channelFor } from "../data/channels.js?v=20261029f";
-import { TEAM_BY_ID } from "../data/teams.js?v=20261029f";
+import { TEAM_BY_ID } from "../data/teams.js?v=20261029h";
 import { applyPhxDisplay, phxTag } from "./phx.js";
 import { GAMES } from "./slate.js";
 

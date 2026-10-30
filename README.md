@@ -4,7 +4,7 @@ Phone-first “where’s the game” board for Arizona sports bars.
 
 - Home screen is big sport buttons (College Football, College Basketball, NFL, NHL, NASCAR, Formula 1)
 - 506-style list (matchup / Phoenix time / network / DTV #)
-- Tap-a-team picker on CFB/CBB/NFL/NHL — no typing (Midwest, Dakotas; CBB uses the same college list; NHL pins Knights + Utah)
+- Tap-a-team picker on CFB/CBB/NFL/NHL — no typing (Midwest, Dakotas; CBB uses the same college list; NHL pins Knights + Mammoth)
 - NASCAR: Truck, O’Reilly, Cup. F1: quali / sprint / race (no driver picker)
 - “Not offered” is a valid answer
 - NFL rows tag Phoenix: LOCAL (FOX 10 / CBS 5), NFL TICKET (9554–9567 guide block), NATIONAL, STREAM / DTV, or REGIONAL until Sunday stamps the local pick

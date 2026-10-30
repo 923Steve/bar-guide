@@ -189,7 +189,7 @@ export const TEAMS = [
   { id: "titans", name: "Titans", conf: "AFC South", league: "nfl" },
   { id: "commanders", name: "Commanders", conf: "NFC East", league: "nfl" },
 
-  // NHL — full 32. Desert pin is Havasu Knights + leftover Arizona / Utah.
+  // NHL — full 32. Desert pin is Havasu Knights + leftover Arizona (Mammoth).
   { id: "ducks", name: "Ducks", conf: "West", league: "nhl" },
   { id: "bruins", name: "Bruins", conf: "East", league: "nhl" },
   { id: "sabres", name: "Sabres", conf: "East", league: "nhl" },
@@ -217,7 +217,7 @@ export const TEAMS = [
   { id: "blues", name: "Blues", conf: "West", league: "nhl" },
   { id: "lightning", name: "Lightning", conf: "East", league: "nhl" },
   { id: "maple-leafs", name: "Maple Leafs", conf: "East", league: "nhl" },
-  { id: "mammoth", name: "Utah", conf: "West", pin: "desert", league: "nhl" },
+  { id: "mammoth", name: "Mammoth", conf: "West", pin: "desert", league: "nhl" },
   { id: "canucks", name: "Canucks", conf: "West", league: "nhl" },
   { id: "golden-knights", name: "Golden Knights", conf: "West", pin: "desert", league: "nhl" },
   { id: "capitals", name: "Capitals", conf: "East", league: "nhl" },

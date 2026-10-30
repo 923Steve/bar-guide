@@ -92,7 +92,7 @@ Locals stay FOX 10 / CBS 5 from the Sunday 6:15 stamp. RedZone is 9551. TNF Prim
 
 Phone opens on big sport buttons: College Football, College Basketball, NFL, NHL, NASCAR, Formula 1.
 Last sport is remembered. **Sports** goes back to the buttons.
-FIND A TEAM is CFB / CBB / NFL / NHL. Same college pins as football (Midwest, Dakotas). NHL Desert pin is Golden Knights + Utah. Men’s hoops only. No driver picker.
+FIND A TEAM is CFB / CBB / NFL / NHL. Same college pins as football (Midwest, Dakotas). NHL Desert pin is Golden Knights + Mammoth. Men’s hoops only. No driver picker.
 
 NASCAR board: Truck (Craftsman), O’Reilly (old Xfinity, CW), Cup.
 F1 board: Sprint Shootout / Sprint / Qualifying / Race. Practice is skipped.
