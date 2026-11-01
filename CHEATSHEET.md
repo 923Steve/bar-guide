@@ -100,6 +100,8 @@ F1 board: Sprint Shootout / Sprint / Qualifying / Race. Practice is skipped.
 ESPN+ is a **block**, not a per-game number: **Bar 9519–9525** (ESPN+ for Business) · **Home 210-1–7** (residential leftover). Do not stamp 95xx per game. B1G+ / SECN+ / ACCNX / MW+ / YouTube stay Streaming Only.
 NHL national: ESPN / TNT / ABC use the existing DTV #s. NHL Network is **215**. Do not invent a Knights “local” or any RSN number. ESPN+ hockey uses the same ESPN+ block.
 
+Phoenix clock is ET minus 3 in daylight time, ET minus 2 after the fall-back. Arizona never changes. Do not hardcode 3.
+
 Tue/Fri football pull **keeps** nascar/f1/cbb/nhl rows, then `pull_racing.py`, `pull_cbb.py`, and `pull_nhl.py` refresh those.
 A racing, hoops, or NHL miss does not fail the football push.
 ESPN often leaves Cup / O’Reilly / F1 stuck on last weekend after the race.

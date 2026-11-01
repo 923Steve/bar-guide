@@ -1,5 +1,5 @@
 import { PINS, TEAMS } from "./data/teams.js?v=20261029h";
-import { dayHeader, formatEt, formatPhx } from "./lib/time.js";
+import { dayHeader, formatEt, formatPhx } from "./lib/time.js?v=20261101a";
 import { decorate, decoratedSlate, gamesForTeam } from "./lib/lookup.js?v=20261029h";
 import { setSlate } from "./lib/slate.js";
 
@@ -231,7 +231,7 @@ function dayHtml([date, games]) {
           <li class="row">
             <div class="matchup">${esc(g.matchup)}${g.phxLabel ? ` <span class="tag tag-${g.phx}">${esc(g.phxLabel)}</span>` : ""}</div>
             <div class="meta">
-              <span class="when">${formatPhx(g.et)}</span>
+              <span class="when">${formatPhx(g.et, g.date)}</span>
               <span class="dot">·</span>
               <span class="net">${esc(g.netLabel)}</span>
               <span class="dot">·</span>

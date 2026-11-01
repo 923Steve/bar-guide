@@ -1,12 +1,32 @@
-/** Sept 2026: AZ is MST, rest of US is still on DST → ET − 3 = Phoenix. */
-const ET_TO_PHX = 3;
+/** Arizona stays MST. Eastern springs forward / falls back.
+ *  EDT → PHX is −3. EST → PHX is −2. Do not hardcode this.
+ */
 
-export function formatPhx(etHHMM) {
+function zoneOffsetHours(timeZone, when) {
+  const name = new Intl.DateTimeFormat("en-US", {
+    timeZone,
+    timeZoneName: "shortOffset",
+  })
+    .formatToParts(when)
+    .find((p) => p.type === "timeZoneName")?.value || "";
+  const m = name.match(/([+-])(\d{1,2})(?::(\d{2}))?/);
+  if (!m) return timeZone === "America/Phoenix" ? -7 : -5;
+  const hours = Number(m[2]) + Number(m[3] || 0) / 60;
+  return m[1] === "-" ? -hours : hours;
+}
+
+export function etToPhxHours(isoDate) {
+  const when = isoDate ? new Date(`${isoDate}T16:00:00Z`) : new Date();
+  return zoneOffsetHours("America/Phoenix", when) - zoneOffsetHours("America/New_York", when);
+}
+
+export function formatPhx(etHHMM, isoDate) {
   if (!etHHMM) return "";
   const [h, m] = String(etHHMM).split(":").map(Number);
-  let hour = h - ET_TO_PHX;
+  let hour = h + etToPhxHours(isoDate);
   const nextDay = hour < 0;
   if (hour < 0) hour += 24;
+  hour = hour % 24;
   const ampm = hour >= 12 ? "p" : "a";
   let h12 = hour % 12;
   if (h12 === 0) h12 = 12;
